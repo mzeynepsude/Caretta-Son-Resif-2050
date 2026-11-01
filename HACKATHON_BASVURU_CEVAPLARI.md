@@ -5,6 +5,18 @@ Bu belge, hackathon başvuru formunda sorulan tüm soruların birlikte çalışt
 
 ---
 
+### 🎯 OYUNUNUZU TEK CÜMLEDE ANLATIN (Logline / Kısa Özet)
+*(Formda veya jüri önünde oyununuzu tek bir cümleyle özetlemeniz istendiğinde kullanılacak en vurucu, samimi ve hedef odaklı cümle)*
+
+#### 🌟 Seçilen & Önerilen En Güçlü Cümle:
+> **"Okyanus Kâşifleri'ne kavuşup Son Resif'e ulaşmaya çalışan Caretta'nın yolculuğu."**
+
+#### 💡 İsteğe Bağlı Zenginleştirilmiş Alternatifler:
+- **Akdeniz Vurgulu:** *"Fırtınada koptuğu Okyanus Kâşifleri'ne kavuşup Son Resif'e ulaşmaya çalışan bir Caretta'nın Akdeniz yolculuğu."*
+- **Ekolojik Dayanışma Vurgulu:** *"Okyanus Kâşifleri'ne kavuşmak için batık Akdeniz canlılarıyla dayanışarak Son Resif'i arayan Caretta'nın yolculuğu."*
+
+---
+
 ### 1. SORU: Oyununuzu kısaca tanıtır mısınız? *
 *(Oyuncunun ne yaptığını ve bunun seçtiğiniz iklim konusuyla ilişkisini belirtin.)*
 
@@ -28,6 +40,9 @@ Bu belge, hackathon başvuru formunda sorulan tüm soruların birlikte çalışt
 ---
 
 ### 2. SORU: Kısaca oyununuzun hikayesine yer verin. Oyuncu kim, hangi rolü üstleniyor ve neyi başarmaya çalışıyor? *
+
+#### 🎯 Tek Cümlelik En Net Yanıt:
+> "Okyanus Kâşifleri'ne kavuşup Son Resif'e ulaşmaya çalışan Caretta'nın yolculuğu."
 
 #### 🌟 En Sade ve Başlıksız Hali (2 Cümle):
 > Oyuncu, fırtınada koptuğu "Okyanus Kâşifleri" ekibini arayan **Caretta** adında bir deniz kaplumbağasını yönetir. Batık bir Akdeniz şehrinde yaşayan deniz canlılarıyla konuşup onların istediği atıkları temizler; canlılardan aldığı ipuçlarıyla ekibine geri ulaşıp Son Resif'teki araştırma istasyonunu bularak denizleri kurtarmaya çalışır.

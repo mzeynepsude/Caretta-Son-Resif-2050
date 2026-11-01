@@ -1,0 +1,114 @@
+[gd_scene load_steps=10 format=3 uid="uid://npc_kestane_scene_01"]
+
+[ext_resource type="Script" path="res://scripts/recycling_npc.gd" id="1_script"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_detect"]
+radius = 3.2
+
+[sub_resource type="StandardMaterial3D" id="Material_rock"]
+albedo_color = Color(0.24, 0.28, 0.25, 1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rock"]
+material = SubResource("Material_rock")
+top_radius = 0.55
+bottom_radius = 0.75
+height = 0.35
+
+[sub_resource type="StandardMaterial3D" id="Material_urchin_body"]
+albedo_color = Color(0.12, 0.28, 0.16, 1)
+metallic = 0.2
+roughness = 0.6
+emission_enabled = true
+emission = Color(0.08, 0.22, 0.12, 1)
+emission_energy_multiplier = 0.3
+
+[sub_resource type="SphereMesh" id="SphereMesh_body"]
+material = SubResource("Material_urchin_body")
+radius = 0.85
+height = 1.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_spine"]
+material = SubResource("Material_urchin_body")
+top_radius = 0.02
+bottom_radius = 0.07
+height = 1.6
+
+[sub_resource type="StandardMaterial3D" id="Material_glass_shard"]
+transparency = 1
+albedo_color = Color(0.2, 0.9, 0.65, 0.7)
+metallic = 0.8
+roughness = 0.1
+emission_enabled = true
+emission = Color(0.25, 0.95, 0.75, 1)
+emission_energy_multiplier = 0.8
+
+[sub_resource type="BoxMesh" id="BoxMesh_glass_shard"]
+material = SubResource("Material_glass_shard")
+size = Vector3(0.3, 0.7, 0.25)
+
+[node name="NpcKestane" type="Area3D"]
+script = ExtResource("1_script")
+category = 1
+npc_name = "Akdeniz Taş Kestanesi (Paracentrotus lividus)"
+short_name = "Taş Kestanesi"
+required_keyword = "Cam"
+npc_theme_color = Color(0.25, 0.95, 0.5, 1)
+badge_title = "Cam Ustası / Berrak Sular"
+badge_desc = "Taş Kestanesi'nden okyanus asitlenmesinde eriyen kabukları ve cam zırhını dinledin."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_detect")
+
+[node name="VisualRoot" type="Node3D" parent="."]
+transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 0, 0.16, 0)
+
+[node name="Body" type="MeshInstance3D" parent="VisualRoot"]
+mesh = SubResource("SphereMesh_body")
+
+[node name="Spine1" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+mesh = SubResource("CylinderMesh_spine")
+
+[node name="Spine2" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 0.6, 0.5, 0)
+mesh = SubResource("CylinderMesh_spine")
+
+[node name="Spine3" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -0.6, 0.5, 0)
+mesh = SubResource("CylinderMesh_spine")
+
+[node name="Spine4" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0.5, 0.6)
+mesh = SubResource("CylinderMesh_spine")
+
+[node name="Spine5" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0.5, -0.6)
+mesh = SubResource("CylinderMesh_spine")
+
+[node name="Spine6" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, 0.8, 0, 0)
+mesh = SubResource("CylinderMesh_spine")
+
+[node name="Spine7" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0, 1, 0, -1, 0, 0, 0, 0, 1, -0.8, 0, 0)
+mesh = SubResource("CylinderMesh_spine")
+
+[node name="GlassShard1" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.866025, 0.353553, 0.353553, 0, 0.707107, -0.707107, -0.5, 0.612372, 0.612372, 0.2, 0.8, 0.2)
+mesh = SubResource("BoxMesh_glass_shard")
+
+[node name="GlassShard2" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, -0.25, 0.75, -0.2)
+mesh = SubResource("BoxMesh_glass_shard")
+
+[node name="AuraLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+light_color = Color(0.2, 0.95, 0.55, 1)
+light_energy = 2.0
+omni_range = 7.0
+
+[node name="RockPedestal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18, 0)
+mesh = SubResource("CylinderMesh_rock")
+

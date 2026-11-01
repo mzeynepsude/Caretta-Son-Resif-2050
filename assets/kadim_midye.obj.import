@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cvmx5cmqdep6"
+path="res://.godot/imported/kadim_midye.obj-5b6f1b753b8372c7c8433df6762bfddd.mesh"
+
+[deps]
+
+files=["res://.godot/imported/kadim_midye.obj-5b6f1b753b8372c7c8433df6762bfddd.mesh"]
+
+source_file="res://assets/kadim_midye.obj"
+dest_files=["res://.godot/imported/kadim_midye.obj-5b6f1b753b8372c7c8433df6762bfddd.mesh", "res://.godot/imported/kadim_midye.obj-5b6f1b753b8372c7c8433df6762bfddd.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

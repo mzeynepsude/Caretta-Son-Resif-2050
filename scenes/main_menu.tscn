@@ -1,0 +1,616 @@
+[gd_scene format=3 uid="uid://main_menu_scene_01"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_menu_script"]
+[ext_resource type="Texture2D" path="res://cinematic_intro_keyframe.jpg" id="2_undersea_tex"]
+[ext_resource type="Texture2D" path="res://assets/ui/logo_cop31.png" id="6_logo_cop31"]
+[ext_resource type="Texture2D" path="res://assets/ui/logo_sdg14.png" id="7_logo_sdg14"]
+[ext_resource type="Texture2D" path="res://assets/ui/logo_sdg13.png" id="8_logo_sdg13"]
+[ext_resource type="AudioStream" uid="uid://bb1qo6a8o3c3f" path="res://assets/audio/underwater_ambiance.wav" id="3_menu_ambiance"]
+[ext_resource type="VideoStream" path="res://assets/video/intro_cinematic.ogv" id="4_video_stream"]
+[ext_resource type="Texture2D" path="res://assets/ui/game_logo.png" id="5_game_logo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn_normal"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.06, 0.16, 0.24, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25, 0.7, 0.9, 0.8)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+content_margin_left = 28.0
+content_margin_top = 24.0
+content_margin_right = 28.0
+content_margin_bottom = 24.0
+bg_color = Color(0.03, 0.09, 0.14, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.3, 0.8, 1, 0.95)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu_script")
+
+[node name="UnderseaBackground" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -20.0
+offset_right = 30.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(640, 360)
+texture = ExtResource("2_undersea_tex")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="OceanDepthOverlay" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.07, 0.13, 0.62)
+
+[node name="FloatingBubbles" type="CPUParticles2D" parent="."]
+position = Vector2(640, 740)
+amount = 32
+lifetime = 7.0
+preprocess = 3.0
+emission_shape = 3
+emission_rect_extents = Vector2(660, 20)
+direction = Vector2(0, -1)
+spread = 15.0
+gravity = Vector2(0, -12)
+initial_velocity_min = 25.0
+initial_velocity_max = 60.0
+scale_amount_min = 2.0
+scale_amount_max = 5.5
+color = Color(0.35, 0.85, 1, 0.4)
+
+[node name="Vignette" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.03, 0.06, 0.35)
+
+[node name="AmbiancePlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_menu_ambiance")
+volume_db = -18.0
+autoplay = true
+
+[node name="TopLeftBadges" type="HBoxContainer" parent="."]
+offset_left = 24.0
+offset_top = 24.0
+offset_right = 232.0
+offset_bottom = 88.0
+theme_override_constants/separation = 12
+
+[node name="LogoCOP31" type="TextureRect" parent="TopLeftBadges"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "Birleşmiş Milletler İklim Değişikliği Konferansı (COP31)"
+texture = ExtResource("6_logo_cop31")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LogoSDG14" type="TextureRect" parent="TopLeftBadges"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "BM Sürdürülebilir Kalkınma Amacı 14: Sudaki Yaşam (Life Below Water)"
+texture = ExtResource("7_logo_sdg14")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LogoSDG13" type="TextureRect" parent="TopLeftBadges"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+tooltip_text = "BM Sürdürülebilir Kalkınma Amacı 13: İklim Eylemi (Climate Action)"
+texture = ExtResource("8_logo_sdg13")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxMenu" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="TitleBox" type="VBoxContainer" parent="CenterContainer/VBoxMenu"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="GameLogoRect" type="TextureRect" parent="CenterContainer/VBoxMenu/TitleBox"]
+custom_minimum_size = Vector2(480, 210)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("5_game_logo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MainTitle" type="Label" parent="CenterContainer/VBoxMenu/TitleBox"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.92, 1, 1)
+theme_override_font_sizes/font_size = 38
+text = "🌊 CARETTA: SON RESİF 2050"
+horizontal_alignment = 1
+
+[node name="SubTitle" type="Label" parent="CenterContainer/VBoxMenu/TitleBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.85, 0.9, 1)
+theme_override_font_sizes/font_size = 15
+text = "COP31 Okyanus Kâşifleri • Akdeniz Batık Şehir & İklim Elçisi"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="CenterContainer/VBoxMenu"]
+layout_mode = 2
+
+[node name="MenuButtons" type="VBoxContainer" parent="CenterContainer/VBoxMenu"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="BtnNewGame" type="Button" parent="CenterContainer/VBoxMenu/MenuButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+text = "▶️ Yeni Oyun"
+
+[node name="BtnContinue" type="Button" parent="CenterContainer/VBoxMenu/MenuButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+text = "⏩ Devam Et (Kayıt)"
+
+[node name="BtnVideos" type="Button" parent="CenterContainer/VBoxMenu/MenuButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+text = "🎬 Sinematikler & Videolar"
+
+[node name="BtnSlots" type="Button" parent="CenterContainer/VBoxMenu/MenuButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+text = "💾 Kayıt Alanları (Slot 1-2-3)"
+
+[node name="BtnSettings" type="Button" parent="CenterContainer/VBoxMenu/MenuButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+text = "⚙️ Ayarlar"
+
+[node name="BtnCredits" type="Button" parent="CenterContainer/VBoxMenu/MenuButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+text = "📜 Krediler & Telif Hakları"
+
+[node name="BtnQuit" type="Button" parent="CenterContainer/VBoxMenu/MenuButtons"]
+custom_minimum_size = Vector2(280, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn_normal")
+text = "🚪 Çıkış"
+
+[node name="SlotsModal" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="SlotsModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.04, 0.07, 0.85)
+
+[node name="Center" type="CenterContainer" parent="SlotsModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="SlotsModal/Center"]
+custom_minimum_size = Vector2(520, 380)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="VBox" type="VBoxContainer" parent="SlotsModal/Center/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HBoxHdr" type="HBoxContainer" parent="SlotsModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="SlotsModal/Center/Panel/VBox/HBoxHdr"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.35, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "💾 KAYIT ALANLARI & OYUN YÜKLE"
+
+[node name="BtnCloseSlots" type="Button" parent="SlotsModal/Center/Panel/VBox/HBoxHdr"]
+custom_minimum_size = Vector2(30, 26)
+layout_mode = 2
+text = "✕"
+
+[node name="HSeparator" type="HSeparator" parent="SlotsModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="SlotsList" type="VBoxContainer" parent="SlotsModal/Center/Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="Hint" type="Label" parent="SlotsModal/Center/Panel/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.65, 0.75, 1)
+theme_override_font_sizes/font_size = 11
+text = "Bilgi: Oyun her 10 dakikada bir 'Otomatik Kayıt' alanına kendiliğinden kaydeder."
+horizontal_alignment = 1
+
+[node name="SettingsModal" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="SettingsModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.04, 0.07, 0.85)
+
+[node name="Center" type="CenterContainer" parent="SettingsModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="SettingsModal/Center"]
+custom_minimum_size = Vector2(480, 320)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="VBox" type="VBoxContainer" parent="SettingsModal/Center/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="HBoxHdr" type="HBoxContainer" parent="SettingsModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="SettingsModal/Center/Panel/VBox/HBoxHdr"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.35, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "⚙️ OYUN AYARLARI"
+
+[node name="BtnCloseSettings" type="Button" parent="SettingsModal/Center/Panel/VBox/HBoxHdr"]
+custom_minimum_size = Vector2(30, 26)
+layout_mode = 2
+text = "✕"
+
+[node name="HSeparator" type="HSeparator" parent="SettingsModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="CheckFullscreen" type="CheckBox" parent="SettingsModal/Center/Panel/VBox"]
+layout_mode = 2
+text = "🖥️ Tam Ekran Modu"
+
+[node name="VBoxSens" type="VBoxContainer" parent="SettingsModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="SensLbl" type="Label" parent="SettingsModal/Center/Panel/VBox/VBoxSens"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "🖱️ Kamera / Fare Hassasiyeti"
+
+[node name="SliderSensitivity" type="HSlider" parent="SettingsModal/Center/Panel/VBox/VBoxSens"]
+layout_mode = 2
+min_value = 0.001
+max_value = 0.008
+step = 0.001
+value = 0.003
+
+[node name="CheckFog" type="CheckBox" parent="SettingsModal/Center/Panel/VBox"]
+layout_mode = 2
+button_pressed = true
+text = "🌫️ Hacimsel Su Altı Sisi ve Biyolüminesans Işık Efektleri"
+
+[node name="CreditsModal" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="CreditsModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.04, 0.07, 0.88)
+
+[node name="Center" type="CenterContainer" parent="CreditsModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="CreditsModal/Center"]
+custom_minimum_size = Vector2(640, 480)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="VBox" type="VBoxContainer" parent="CreditsModal/Center/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HBoxHdr" type="HBoxContainer" parent="CreditsModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="CreditsModal/Center/Panel/VBox/HBoxHdr"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.85, 0.25, 1)
+theme_override_font_sizes/font_size = 18
+text = "📜 KREDİLER, TELİF HAKLARI & MODEL ATIFLARI"
+
+[node name="BtnCloseCredits" type="Button" parent="CreditsModal/Center/Panel/VBox/HBoxHdr"]
+custom_minimum_size = Vector2(30, 26)
+layout_mode = 2
+text = "✕"
+
+[node name="HSeparator" type="HSeparator" parent="CreditsModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="Scroll" type="ScrollContainer" parent="CreditsModal/Center/Panel/VBox"]
+custom_minimum_size = Vector2(580, 360)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CreditsText" type="Label" parent="CreditsModal/Center/Panel/VBox/Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.9, 0.94, 0.98, 1)
+theme_override_constants/line_spacing = 4
+theme_override_font_sizes/font_size = 13
+text = "🏝️ 3D SUALTI ARAZİSİ & RESİF TABANI (UNDERWATER TERRAIN):
+• Model: Underwater_terrain_-_agisoftnaturechallenge
+• Yazar / Sanatçı: teacherap123 (https://sketchfab.com/teacherap123)
+• Kaynak: https://sketchfab.com/3d-models/underwater-terrain---agisoftnaturechallenge-3dcb3f64c2fa4c798ac2bb16cf8c2d89
+• Lisans: Creative Commons Attribution 4.0 International (CC-BY-4.0)
+• Yasal Atıf: "This work is based on 'Underwater_terrain_-_agisoftnaturechallenge' by teacherap123 licensed under CC-BY-4.0."
+
+🐢 3D CARETTA & DERİ SIRTLI BİLGE DEV MODELİ:
+• Model: Animated Sea Turtle - Rigged & Optimized
+• Sanatçı: GAMICO (sketchfab.com/gamico)
+• Lisans: Creative Commons Attribution 4.0 International (CC-BY-4.0)
+• Yasal Atıf: "This work is based on 'Animated Sea Turtle - Rigged & Optimized' by GAMICO licensed under CC-BY-4.0."
+
+🐟 AKDENİZ 3D BALIK VE RESİF CANLILARI:
+• Akdeniz Levreği, Çizgili Sargoz, Gökkuşağı Lapini (Thalassoma), Çırçır Balığı (Symphodus)
+• Lisans: Sketchfab CC-BY-4.0
+
+🧴 GERİ DÖNÜŞTÜRÜLEBİLİR 3D ATIK MODELLERİ:
+• Plastik Şişeler: Sousinho ("Water bottles", Sketchfab)
+• Cam Soda Şişesi: assetfactory ("Glass Soda Bottle", Sketchfab)
+• Alüminyum İçecek Kutusu: Jeferson Camargo Brasil ("aluminium can- 350ml", Sketchfab)
+• Batık Kitap / Kağıt: znwba ("Book", Sketchfab)
+
+🪸 AKDENİZ VE OKYANUS 3D MERCAN & BİTKİ MODELLERİ:
+• Lowpoly Coral Pack & Sualtı Bitkileri: assetfactory (Sketchfab)
+• Bilimsel Taramalar (Beyin, Tabak, Dantel Mercanı): The Smithsonian Institution (CC0-1.0)
+
+🏛️ BATIK DİSTOPİK ŞEHİR & GÖKDELEN KALINTILARI:
+• Skyscrapers Pack (7 Ayrıştırılmış Batık Kule & Yosunlu Kalıntılar): assetfactory (Sketchfab)
+
+🌊 HİKÂYE, EVREN VE RESMİ COP31 KARAKTERLERİ:
+• Kurum: T.C. Çevre, Şehircilik ve İklim Değişikliği Bakanlığı / COP31 Türkiye
+• Resmi Portal: cop31.tr (cop31.tr/tr/caretta)
+• Felsefe: Antalya 100 milyon yıllık Caretta mirası, Sıfır Atık ve +1.5°C hedefi.
+
+⚙️ OYUN MOTORU & YAZILIM:
+• Godot Engine 4 (MIT License - Copyright (c) 2014-present Godot Engine contributors)
+• Parametrik 3D Modelleme: Kadim Pina, Dalgalı Kum Tabanı & Son Resif Kutsal Alanı"
+autowrap_mode = 2
+
+
+[node name="VideosModal" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Backdrop" type="ColorRect" parent="VideosModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.01, 0.04, 0.07, 0.9)
+
+[node name="Center" type="CenterContainer" parent="VideosModal"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="PanelContainer" parent="VideosModal/Center"]
+custom_minimum_size = Vector2(920, 560)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="VBox" type="VBoxContainer" parent="VideosModal/Center/Panel"]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="HBoxHdr" type="HBoxContainer" parent="VideosModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VideosModal/Center/Panel/VBox/HBoxHdr"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.82, 0.35, 1)
+theme_override_font_sizes/font_size = 18
+text = "🎬 COP31 SİNEMATİK & VİDEO TİYATROSU"
+
+[node name="BtnCloseVideos" type="Button" parent="VideosModal/Center/Panel/VBox/HBoxHdr"]
+custom_minimum_size = Vector2(30, 26)
+layout_mode = 2
+text = "✕"
+
+[node name="HSeparator" type="HSeparator" parent="VideosModal/Center/Panel/VBox"]
+layout_mode = 2
+
+[node name="BodyHBox" type="HBoxContainer" parent="VideosModal/Center/Panel/VBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="VideoPlayerBox" type="VBoxContainer" parent="VideosModal/Center/Panel/VBox/BodyHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="VideoFrame" type="AspectRatioContainer" parent="VideosModal/Center/Panel/VBox/BodyHBox/VideoPlayerBox"]
+layout_mode = 2
+size_flags_vertical = 3
+ratio = 1.7778
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="VideosModal/Center/Panel/VBox/BodyHBox/VideoPlayerBox/VideoFrame"]
+layout_mode = 2
+stream = ExtResource("4_video_stream")
+expand = true
+
+[node name="VideoControls" type="HBoxContainer" parent="VideosModal/Center/Panel/VBox/BodyHBox/VideoPlayerBox"]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="BtnPlayPause" type="Button" parent="VideosModal/Center/Panel/VBox/BodyHBox/VideoPlayerBox/VideoControls"]
+custom_minimum_size = Vector2(110, 36)
+layout_mode = 2
+text = "⏸ Duraklat"
+
+[node name="BtnRestart" type="Button" parent="VideosModal/Center/Panel/VBox/BodyHBox/VideoPlayerBox/VideoControls"]
+custom_minimum_size = Vector2(110, 36)
+layout_mode = 2
+text = "🔄 Baştan"
+
+[node name="CheckLoop" type="CheckBox" parent="VideosModal/Center/Panel/VBox/BodyHBox/VideoPlayerBox/VideoControls"]
+layout_mode = 2
+button_pressed = true
+text = "Döngü (Loop)"
+
+[node name="BtnFullscreenVideo" type="Button" parent="VideosModal/Center/Panel/VBox/BodyHBox/VideoPlayerBox/VideoControls"]
+custom_minimum_size = Vector2(140, 36)
+layout_mode = 2
+text = "⛶ Tam Ekran Video"
+
+[node name="PlaylistVBox" type="VBoxContainer" parent="VideosModal/Center/Panel/VBox/BodyHBox"]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PlaylistTitle" type="Label" parent="VideosModal/Center/Panel/VBox/BodyHBox/PlaylistVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 14
+text = "🎞️ TANITIM & SİNEMATİK LİSTESİ"
+
+[node name="BtnPlayVideo1" type="Button" parent="VideosModal/Center/Panel/VBox/BodyHBox/PlaylistVBox"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "▶ 01. Giriş Sinematiği\n(Batık Şehir & Caretta)"
+alignment = 0
+
+[node name="BtnPlayVideo2" type="Button" parent="VideosModal/Center/Panel/VBox/BodyHBox/PlaylistVBox"]
+custom_minimum_size = Vector2(0, 52)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "▶ 02. Final Sinematiği\n(Son Resif & Kurtuluş)"
+alignment = 0
+
+[node name="VideoInfoPanel" type="PanelContainer" parent="VideosModal/Center/Panel/VBox/BodyHBox/PlaylistVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="InfoLabel" type="Label" parent="VideosModal/Center/Panel/VBox/BodyHBox/PlaylistVBox/VideoInfoPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.85, 0.92, 0.95, 1)
+theme_override_constants/line_spacing = 3
+theme_override_font_sizes/font_size = 12
+text = "📌 Video Detayları:\n• Süre: 10 Saniye\n• Çözünürlük: 1280x720 HD\n• Format: Theora OGV / Vorbis\n• Konu: 2050 yılı Akdeniz dip suları, batık metropol kalıntıları ve deniz kaplumbağamız Caretta'nın kâşifleri arayışı.\n• Kullanım: Canlı sunum ve tanıtım."
+autowrap_mode = 2

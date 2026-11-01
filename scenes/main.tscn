@@ -1,0 +1,1256 @@
+[gd_scene format=3 uid="uid://dt2l3bwjo05cw"]
+
+[ext_resource type="PackedScene" path="res://scenes/player.tscn" id="1_player"]
+[ext_resource type="Script" uid="uid://c3fwgk67wakdv" path="res://scripts/hot_zone.gd" id="2_hotzone"]
+[ext_resource type="Script" uid="uid://cvk8l3df8qe2t" path="res://scripts/hud.gd" id="3_hud"]
+[ext_resource type="Script" uid="uid://wcpmdvbhr584" path="res://scripts/dialogue_manager.gd" id="5_dialogue"]
+[ext_resource type="PackedScene" uid="uid://dmydie01kadim" path="res://scenes/kadim_midye.tscn" id="6_kadim_midye"]
+[ext_resource type="PackedScene" path="res://scenes/bottle_small_collectible.tscn" id="10_bottle_small"]
+[ext_resource type="PackedScene" path="res://scenes/glass_bottle_collectible.tscn" id="11_glass"]
+[ext_resource type="PackedScene" path="res://scenes/metal_can_collectible.tscn" id="12_metal"]
+[ext_resource type="PackedScene" path="res://scenes/bottle_large_collectible.tscn" id="13_bottle_large"]
+[ext_resource type="PackedScene" path="res://scenes/akdeniz_foku.tscn" id="14_fok"]
+[ext_resource type="PackedScene" path="res://scenes/deri_sirtli_dev.tscn" id="15_dev"]
+[ext_resource type="ArrayMesh" uid="uid://d4ci3up513g27" path="res://assets/seabed_dunes.obj" id="16_seabed_mesh"]
+[ext_resource type="Script" uid="uid://bo6j6nvqi1enn" path="res://scripts/seabed.gd" id="17_seabed_script"]
+[ext_resource type="PackedScene" path="res://scenes/npc_yengec.tscn" id="20_yengec"]
+[ext_resource type="PackedScene" path="res://scenes/npc_kestane.tscn" id="21_kestane"]
+[ext_resource type="PackedScene" path="res://scenes/npc_istakoz.tscn" id="22_istakoz"]
+[ext_resource type="PackedScene" path="res://scenes/research_station.tscn" id="23_station"]
+[ext_resource type="PackedScene" path="res://scenes/book_collectible.tscn" id="24_book"]
+[ext_resource type="PackedScene" path="res://scenes/npc_deniz_tavsani.tscn" id="25_deniz_tavsani"]
+[ext_resource type="PackedScene" path="res://scenes/jellyfish_mediterranean.tscn" id="26_jelly_med"]
+[ext_resource type="PackedScene" path="res://scenes/jellyfish_rhopilema.tscn" id="27_jelly_rho"]
+[ext_resource type="PackedScene" path="res://scenes/plastic_bag_trap.tscn" id="28_bag_trap"]
+[ext_resource type="PackedScene" path="res://scenes/resin_collectible.tscn" id="31_resin"]
+[ext_resource type="PackedScene" path="res://scenes/school_fish.tscn" id="33_school_fish_scene"]
+[ext_resource type="Script" uid="uid://dfn725kbadiuj" path="res://scripts/environment_builder.gd" id="34_env_builder"]
+[ext_resource type="PackedScene" path="res://scenes/fish_levrek.tscn" id="35_fish_levrek"]
+[ext_resource type="PackedScene" path="res://scenes/fish_sargos.tscn" id="36_fish_sargos"]
+[ext_resource type="PackedScene" path="res://scenes/fish_thalassoma.tscn" id="37_fish_thalassoma"]
+[ext_resource type="PackedScene" path="res://scenes/fish_symphodus.tscn" id="38_fish_symphodus"]
+[ext_resource type="Texture2D" uid="uid://clne3uth04hke" path="res://assets/sand/mediterranean_sand_albedo.png" id="39_sand_albedo"]
+[ext_resource type="Texture2D" uid="uid://ddllpu5glak6s" path="res://assets/sand/mediterranean_sand_normal.png" id="40_sand_normal"]
+[ext_resource type="Texture2D" uid="uid://dbflhgq0q3pp1" path="res://assets/sand/mediterranean_sand_roughness.png" id="41_sand_roughness"]
+[ext_resource type="PackedScene" path="res://scenes/underwater_terrain.tscn" id="42_underwater_terrain"]
+[ext_resource type="PackedScene" path="res://scenes/coral_red.tscn" id="43_coral_red"]
+[ext_resource type="PackedScene" path="res://scenes/coral_blue.tscn" id="44_coral_blue"]
+[ext_resource type="PackedScene" path="res://scenes/coral_single.tscn" id="45_coral_single"]
+[ext_resource type="PackedScene" path="res://scenes/coral_brain.tscn" id="46_coral_brain"]
+[ext_resource type="PackedScene" path="res://scenes/coral_plate.tscn" id="47_coral_plate"]
+[ext_resource type="PackedScene" path="res://scenes/coral_lace.tscn" id="48_coral_lace"]
+[ext_resource type="PackedScene" path="res://scenes/coral_pack.tscn" id="49_coral_pack"]
+[ext_resource type="PackedScene" path="res://scenes/underwater_plant.tscn" id="50_underwater_plant"]
+[ext_resource type="PackedScene" path="res://scenes/skyscraper_1.tscn" id="52_sky1"]
+[ext_resource type="PackedScene" path="res://scenes/skyscraper_2.tscn" id="53_sky2"]
+[ext_resource type="PackedScene" path="res://scenes/skyscraper_3.tscn" id="54_sky3"]
+[ext_resource type="PackedScene" path="res://scenes/skyscraper_4.tscn" id="55_sky4"]
+[ext_resource type="PackedScene" path="res://scenes/skyscraper_5.tscn" id="56_sky5"]
+[ext_resource type="PackedScene" path="res://scenes/skyscraper_6.tscn" id="57_sky6"]
+[ext_resource type="PackedScene" path="res://scenes/skyscraper_7.tscn" id="58_sky7"]
+[ext_resource type="PackedScene" path="res://scenes/monster_building_u_shape.tscn" id="59_monster_u"]
+[ext_resource type="PackedScene" path="res://scenes/monster_building_stepped.tscn" id="60_monster_step"]
+[ext_resource type="PackedScene" uid="uid://ckqtxcg4ibr61" path="res://scenes/okyanus_kasifi_turtle.tscn" id="61_kasif_turtle"]
+[ext_resource type="PackedScene" path="res://scenes/coral_gold.tscn" id="62_coral_gold"]
+[ext_resource type="PackedScene" path="res://scenes/coral_purple.tscn" id="63_coral_purple"]
+[ext_resource type="PackedScene" path="res://scenes/coral_emerald.tscn" id="64_coral_emerald"]
+[ext_resource type="Texture2D" path="res://assets/ui/logo_cop31.png" id="65_logo_cop31"]
+[ext_resource type="Texture2D" path="res://assets/ui/logo_sdg14.png" id="66_logo_sdg14"]
+[ext_resource type="Texture2D" path="res://assets/ui/logo_sdg13.png" id="67_logo_sdg13"]
+
+[sub_resource type="Environment" id="Environment_underwater"]
+background_mode = 1
+background_color = Color(0.08, 0.36, 0.48, 1)
+ambient_light_source = 2
+ambient_light_color = Color(0.24, 0.54, 0.66, 1)
+ambient_light_energy = 1.35
+fog_enabled = true
+fog_light_color = Color(0.12, 0.42, 0.54, 1)
+fog_density = 0.007
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.008
+volumetric_fog_albedo = Color(0.18, 0.5, 0.62, 1)
+volumetric_fog_emission = Color(0.04, 0.16, 0.22, 1)
+volumetric_fog_emission_energy = 0.8
+volumetric_fog_anisotropy = 0.3
+
+[sub_resource type="StandardMaterial3D" id="Material_seabed"]
+albedo_color = Color(1, 0.96, 0.88, 1)
+albedo_texture = ExtResource("39_sand_albedo")
+roughness = 0.82
+roughness_texture = ExtResource("41_sand_roughness")
+normal_enabled = true
+normal_scale = 1.75
+normal_texture = ExtResource("40_sand_normal")
+texture_filter = 5
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hotzone"]
+radius = 9.0
+
+[sub_resource type="StandardMaterial3D" id="Material_hotzone"]
+transparency = 1
+albedo_color = Color(0.85, 0.2, 0.05, 0.25)
+emission_enabled = true
+emission = Color(0.8, 0.15, 0, 1)
+emission_energy_multiplier = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_hotzone"]
+material = SubResource("Material_hotzone")
+radius = 9.0
+height = 18.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_logo_deck"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.02, 0.08, 0.14, 0.85)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.18, 0.55, 0.75, 0.5)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.35)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_telemetry_deck"]
+content_margin_left = 14.0
+content_margin_top = 10.0
+content_margin_right = 14.0
+content_margin_bottom = 10.0
+bg_color = Color(0.03, 0.09, 0.15, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25, 0.75, 0.95, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0.06, 0.35, 0.55, 0.25)
+shadow_size = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bar_bg"]
+bg_color = Color(0.015, 0.05, 0.08, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.15, 0.35, 0.45, 0.5)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_health_fill"]
+bg_color = Color(0.1, 0.88, 0.55, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_stamina_fill"]
+bg_color = Color(0.15, 0.75, 1, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_interact_hint"]
+content_margin_left = 18.0
+content_margin_top = 6.0
+content_margin_right = 18.0
+content_margin_bottom = 6.0
+bg_color = Color(0.06, 0.08, 0.12, 0.9)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.86, 0.74, 0.48, 0.85)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+shadow_color = Color(0, 0, 0, 0.4)
+shadow_size = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_inventory"]
+content_margin_left = 18.0
+content_margin_top = 16.0
+content_margin_right = 18.0
+content_margin_bottom = 16.0
+bg_color = Color(0.05, 0.12, 0.18, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.25, 0.7, 0.9, 0.85)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dialogue"]
+content_margin_left = 34.0
+content_margin_top = 18.0
+content_margin_right = 34.0
+content_margin_bottom = 18.0
+bg_color = Color(0.06, 0.08, 0.12, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.86, 0.74, 0.48, 0.8)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_size = 18
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nameplate"]
+content_margin_left = 18.0
+content_margin_top = 4.0
+content_margin_right = 18.0
+content_margin_bottom = 4.0
+bg_color = Color(0.04, 0.06, 0.09, 0.96)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.88, 0.76, 0.5, 0.92)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.88, 0.76, 0.5, 0.22)
+shadow_size = 4
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_genshin_sep"]
+color = Color(0.86, 0.74, 0.48, 0.35)
+
+[node name="Main" type="Node3D" unique_id=317008852]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=599140095]
+environment = SubResource("Environment_underwater")
+
+[node name="SunLight" type="DirectionalLight3D" parent="." unique_id=1669008486]
+transform = Transform3D(0.866025, -0.353553, 0.353553, 0, 0.707107, 0.707107, -0.5, -0.612372, 0.612372, 0, 48, 0)
+light_color = Color(0.82, 0.96, 1, 1)
+light_energy = 2.4
+light_volumetric_fog_energy = 2.0
+shadow_enabled = true
+
+[node name="ReefEnvironment" type="Node3D" parent="." unique_id=987123456]
+script = ExtResource("34_env_builder")
+
+[node name="Seabed" type="StaticBody3D" parent="." unique_id=729574593]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, 0, -7.5, 0)
+script = ExtResource("17_seabed_script")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Seabed" unique_id=1099375193]
+mesh = ExtResource("16_seabed_mesh")
+surface_material_override/0 = SubResource("Material_seabed")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Seabed" unique_id=342120102]
+
+[node name="DystopianBuildings" type="Node3D" parent="." unique_id=1125185674]
+
+[node name="Building1" parent="DystopianBuildings" unique_id=466167330 instance=ExtResource("52_sky1")]
+transform = Transform3D(0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, 0.965926, -15, -7.5, -25)
+
+[node name="Building2" parent="DystopianBuildings" unique_id=1352694503 instance=ExtResource("54_sky3")]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, 20, -7.5, -30)
+
+[node name="Building3" parent="DystopianBuildings" unique_id=1155922023 instance=ExtResource("53_sky2")]
+transform = Transform3D(0.985426, 0.080050, 0.150094, -0.088250, 0.994903, 0.048779, -0.145424, -0.061314, 0.987468, -5, -7.5, -45)
+
+[node name="Building4_RuinedTerrace" parent="DystopianBuildings" unique_id=1155922024 instance=ExtResource("55_sky4")]
+transform = Transform3D(0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, 0.939693, -35, -7.5, -60)
+
+[node name="Building5_NeedleSpire" parent="DystopianBuildings" unique_id=1155922025 instance=ExtResource("56_sky5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -7.5, -55)
+
+[node name="Building6_SunkenMonolith" parent="DystopianBuildings" unique_id=1155922026 instance=ExtResource("57_sky6")]
+transform = Transform3D(0.966887, -0.050050, 0.250249, 0.046739, 0.998723, 0.019160, -0.250888, -0.006829, 0.967992, -60, -7.5, -45)
+
+[node name="Building7_CurvedTower" parent="DystopianBuildings" unique_id=1155922027 instance=ExtResource("58_sky7")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 15, -7.5, -65)
+
+[node name="Building8_TiltedSpire" parent="DystopianBuildings" unique_id=1155922028 instance=ExtResource("56_sky5")]
+transform = Transform3D(0.984808, 0, -0.173648, 0, 1, 0, 0.173648, 0, 0.984808, 38, -7.5, -34)
+
+[node name="Building9_TiltedRuins" parent="DystopianBuildings" unique_id=1155922029 instance=ExtResource("52_sky1")]
+transform = Transform3D(0.707107, 0.100000, -0.700000, -0.095611, 0.994380, 0.045472, 0.700613, 0.034774, 0.712694, -25, -7.5, -68)
+
+[node name="Building10_DeepRuin" parent="DystopianBuildings" unique_id=1155922030 instance=ExtResource("57_sky6")]
+transform = Transform3D(0.940482, 0.080067, -0.330277, -0.068641, 0.996574, 0.046134, 0.332839, -0.020718, 0.942756, -38, -7.5, -72)
+
+[node name="MonsterBuilding_North" parent="DystopianBuildings" unique_id=1155922031 instance=ExtResource("59_monster_u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -7.5, -82)
+
+[node name="MonsterBuilding_East" parent="DystopianBuildings" unique_id=1155922032 instance=ExtResource("60_monster_step")]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 56, -7.5, -58)
+
+[node name="MonsterBuilding_West" parent="DystopianBuildings" unique_id=1155922033 instance=ExtResource("59_monster_u")]
+transform = Transform3D(0.825336, 0, 0.564642, 0, 1, 0, -0.564642, 0, 0.825336, -66, -7.5, -68)
+
+[node name="MonsterBuilding_DeepNorth" parent="DystopianBuildings" unique_id=1155922034 instance=ExtResource("60_monster_step")]
+transform = Transform3D(0.968912, 0, 0.247404, 0, 1, 0, -0.247404, 0, 0.968912, -52, -7.5, -92)
+
+[node name="Player" parent="." unique_id=1871082755 instance=ExtResource("1_player")]
+
+[node name="FishSchools" type="Node3D" parent="." unique_id=1580453776]
+
+[node name="School_StartFront" parent="FishSchools" unique_id=1982736451 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -4.5)
+swim_radius_x = 3.8
+swim_radius_z = 3.2
+swim_speed = 0.9
+
+[node name="Fish_Levrek_Start" parent="FishSchools" unique_id=1982736452 instance=ExtResource("35_fish_levrek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, -1.5, -4.2)
+patrol_radius_x = 4.2
+patrol_radius_z = 3.8
+
+[node name="Fish_Sargos_Start" parent="FishSchools" unique_id=1982736453 instance=ExtResource("36_fish_sargos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8, -2.2, -4)
+patrol_radius_x = 3.5
+patrol_radius_z = 3.5
+
+[node name="Fish_Thalassoma_Start" parent="FishSchools" unique_id=1982736454 instance=ExtResource("37_fish_thalassoma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, -1.2, -6.5)
+patrol_radius_x = 4.0
+patrol_radius_z = 4.0
+swim_speed = 1.1
+
+[node name="Fish_Symphodus_Start" parent="FishSchools" unique_id=1982736455 instance=ExtResource("38_fish_symphodus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8, -1.8, -5.5)
+patrol_radius_x = 3.6
+patrol_radius_z = 3.6
+
+[node name="School_Building1" parent="FishSchools" unique_id=1982736456 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -2.2, -16)
+swim_radius_x = 5.5
+swim_radius_z = 4.5
+swim_speed = 0.9
+
+[node name="Fish_Levrek_B1" parent="FishSchools" unique_id=1982736457 instance=ExtResource("35_fish_levrek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5, -1.8, -14)
+patrol_radius_z = 4.5
+swim_speed = 1.0
+
+[node name="School_Building2" parent="FishSchools" unique_id=1982736458 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, -2.5, -20)
+swim_radius_x = 5.0
+swim_radius_z = 5.0
+
+[node name="Fish_Sargos_B2" parent="FishSchools" unique_id=1982736459 instance=ExtResource("36_fish_sargos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -2.8, -22)
+
+[node name="School_Building3" parent="FishSchools" unique_id=1982736460 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -3, -27)
+swim_radius_z = 4.8
+swim_speed = 0.95
+
+[node name="School_Lapin" parent="FishSchools" unique_id=1549693571 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, -14)
+swim_radius_x = 5.5
+swim_radius_z = 4.5
+swim_speed = 0.95
+
+[node name="School_Papaz" parent="FishSchools" unique_id=458355811 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -2.8, -15)
+swim_radius_x = 4.5
+swim_radius_z = 5.5
+swim_speed = 1.1
+
+[node name="School_Sarpa" parent="FishSchools" unique_id=1036889248 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -3, -22)
+swim_radius_x = 6.5
+swim_radius_z = 4.5
+
+[node name="Fish_Thalassoma_Reef1" parent="FishSchools" unique_id=1982736461 instance=ExtResource("37_fish_thalassoma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2.2, -10)
+patrol_radius_x = 4.2
+patrol_radius_z = 4.2
+
+[node name="Fish_Symphodus_Reef1" parent="FishSchools" unique_id=1982736462 instance=ExtResource("38_fish_symphodus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -2.6, -12)
+patrol_radius_x = 4.0
+patrol_radius_z = 4.0
+
+[node name="KadimMidyeNPC" parent="." unique_id=569976838 instance=ExtResource("6_kadim_midye")]
+transform = Transform3D(-0.939693, 0, 0.34202, 0, 1, 0, -0.34202, 0, -0.939693, -2, -7.3, -13)
+
+[node name="HotWaterZone" type="Area3D" parent="." unique_id=523329112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, 0.14, -8.65)
+script = ExtResource("2_hotzone")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HotWaterZone" unique_id=235947898]
+shape = SubResource("SphereShape3D_hotzone")
+
+[node name="VisualMesh" type="MeshInstance3D" parent="HotWaterZone" unique_id=113659610]
+mesh = SubResource("SphereMesh_hotzone")
+
+[node name="Collectibles" type="Node3D" parent="." unique_id=2003272216]
+
+[node name="Bottle1" parent="Collectibles" unique_id=242771503 instance=ExtResource("10_bottle_small")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -4.5, -12)
+
+[node name="Bottle2" parent="Collectibles" unique_id=815418248 instance=ExtResource("13_bottle_large")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -4.2, -16)
+
+[node name="Bottle3" parent="Collectibles" unique_id=32220299 instance=ExtResource("10_bottle_small")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -4.5, -58)
+
+[node name="Bottle4" parent="Collectibles" unique_id=1609807948 instance=ExtResource("13_bottle_large")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, -4.5, -24)
+
+[node name="GlassBottle1" parent="Collectibles" unique_id=1413890912 instance=ExtResource("11_glass")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, -3.8, -18)
+
+[node name="GlassBottle2" parent="Collectibles" unique_id=1657734807 instance=ExtResource("11_glass")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -4.5, -12)
+
+[node name="MetalCan1" parent="Collectibles" unique_id=1077045492 instance=ExtResource("12_metal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -4.5, -22)
+
+[node name="MetalCan2" parent="Collectibles" unique_id=1490582032 instance=ExtResource("12_metal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -5, -52)
+
+[node name="GlassBottle3" parent="Collectibles" unique_id=632117368 instance=ExtResource("11_glass")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, -3.8, -34)
+
+[node name="MetalCan3" parent="Collectibles" unique_id=296145209 instance=ExtResource("12_metal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, -3.2, -18)
+
+[node name="Book1" parent="Collectibles" unique_id=405509844 instance=ExtResource("24_book")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -3.5, -34)
+
+[node name="Book2" parent="Collectibles" unique_id=433255085 instance=ExtResource("24_book")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -46, -3.8, -20)
+
+[node name="Book3" parent="Collectibles" unique_id=62885245 instance=ExtResource("24_book")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108, -4.8, -32)
+
+[node name="Book4" parent="Collectibles" unique_id=1892764054 instance=ExtResource("24_book")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, -4.5, -48)
+
+[node name="Book5" parent="Collectibles" unique_id=1901034918 instance=ExtResource("24_book")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33, -4.2, -44)
+
+[node name="Book6" parent="Collectibles" unique_id=1568553354 instance=ExtResource("24_book")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78, -4.5, -22)
+
+[node name="Bottle_Demo1" parent="Collectibles" unique_id=666968761 instance=ExtResource("10_bottle_small")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -5, -18.5)
+
+[node name="Bottle_Demo2" parent="Collectibles" unique_id=769238906 instance=ExtResource("13_bottle_large")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -4.2, -21)
+
+[node name="MetalCan_Sanctuary" parent="Collectibles" unique_id=247961370 instance=ExtResource("12_metal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, -4.5, -28)
+
+[node name="GlassBottle_FarWest" parent="Collectibles" unique_id=334947755 instance=ExtResource("11_glass")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, -4.5, -16)
+
+[node name="Bottle_ReefRim" parent="Collectibles" unique_id=2004245580 instance=ExtResource("10_bottle_small")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, -5, -6)
+
+[node name="ResinPellet1" parent="Collectibles" unique_id=2061462224 instance=ExtResource("31_resin")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -4.5, -14)
+
+[node name="ResinPellet2" parent="Collectibles" unique_id=1319266907 instance=ExtResource("31_resin")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, -4.2, -34)
+
+[node name="ResinPellet3" parent="Collectibles" unique_id=474790589 instance=ExtResource("31_resin")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, -4.5, -34)
+
+[node name="MetalCan_Sanctuary2" parent="Collectibles" unique_id=1452225325 instance=ExtResource("12_metal")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88, -4.5, -28)
+
+[node name="GlassBottle_FarWest2" parent="Collectibles" unique_id=1389136571 instance=ExtResource("11_glass")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -98, -4.5, -16)
+
+[node name="Bottle_ReefRim2" parent="Collectibles" unique_id=395591278 instance=ExtResource("10_bottle_small")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, -5, -7)
+
+[node name="ResinPellet4" parent="Collectibles" unique_id=994861632 instance=ExtResource("31_resin")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, -4.5, -14)
+
+[node name="ResinPellet5" parent="Collectibles" unique_id=928628713 instance=ExtResource("31_resin")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32, -4.2, -34)
+
+[node name="ResinPellet6" parent="Collectibles" unique_id=815918091 instance=ExtResource("31_resin")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, -4.5, -34)
+
+[node name="AkdenizFoku" parent="." unique_id=919036984 instance=ExtResource("14_fok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 1, -44)
+
+[node name="DeriSirtliDev" parent="." unique_id=1241847242 instance=ExtResource("15_dev")]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, -11.625815, 1.8165598, -3.8934813)
+
+[node name="NpcYengec" parent="." unique_id=743945534 instance=ExtResource("20_yengec")]
+transform = Transform3D(-0.857493, 0, 0.514496, 0, 1, 0, -0.514496, 0, -0.857493, -9, -7.15, -15)
+
+[node name="NpcDenizTavsani" parent="." unique_id=607398561 instance=ExtResource("25_deniz_tavsani")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 3, -7.1, -18)
+
+[node name="NpcKestane" parent="." unique_id=323093915 instance=ExtResource("21_kestane")]
+transform = Transform3D(0.92388, 0, -0.382683, 0, 1, 0, 0.382683, 0, 0.92388, 14, -7, -25)
+
+[node name="NpcIstakoz" parent="." unique_id=227377440 instance=ExtResource("22_istakoz")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, -4, -7.1, -34)
+
+[node name="ResearchStation" parent="." unique_id=1774740177 instance=ExtResource("23_station")]
+transform = Transform3D(0, 0, 1, 0, 1, 0, -1, 0, 0, -74.67781, -2, -26.06483)
+
+[node name="TheLastReefSanctuary" type="Node3D" parent="." unique_id=1841912734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68, -7.5, -10)
+
+[node name="ReefLight" type="OmniLight3D" parent="TheLastReefSanctuary" unique_id=152824954]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
+light_color = Color(0.25, 0.95, 0.85, 1)
+light_energy = 5.0
+omni_range = 50.0
+
+[node name="ReefTerrain_Agisoft_SE" parent="TheLastReefSanctuary" unique_id=1982736481 instance=ExtResource("42_underwater_terrain")]
+transform = Transform3D(1.6, 0, 0, 0, 1.6, 0, 0, 0, 1.6, 10.5, 0, 6.5)
+
+[node name="ReefTerrain_Agisoft_NW" parent="TheLastReefSanctuary" unique_id=1982736482 instance=ExtResource("42_underwater_terrain")]
+transform = Transform3D(1.260626, 0, 0.608952, 0, 1.5, 0, -0.608952, 0, 1.260626, -9.5, 0, -7.5)
+
+[node name="ReefTerrain_Agisoft_NE" parent="TheLastReefSanctuary" unique_id=1982736483 instance=ExtResource("42_underwater_terrain")]
+transform = Transform3D(1.072936, 0, -0.734035, 0, 1.5, 0, 0.734035, 0, 1.072936, 7, 0, -9.5)
+
+[node name="ReefTerrain_Agisoft_SW" parent="TheLastReefSanctuary" unique_id=1982736484 instance=ExtResource("42_underwater_terrain")]
+transform = Transform3D(0.657714, 0, 1.292251, 0, 1.45, 0, -1.292251, 0, 0.657714, -8, 0, 8)
+
+[node name="AuthenticCoral_Brain" parent="TheLastReefSanctuary" unique_id=214500103 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(1.225083, 0, 0.248337, 0, 1.25, 0, -0.248337, 0, 1.225083, 0, 0.05, 0)
+
+[node name="SanctuaryCoral_Brain_2" parent="TheLastReefSanctuary" unique_id=214500301 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(0.766377, 0, 0.789092, 0, 1.1, 0, -0.789092, 0, 0.766377, 3.2, 0.05, 1.5)
+
+[node name="SanctuaryCoral_Brain_3" parent="TheLastReefSanctuary" unique_id=214500302 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(0.879569, 0, -0.74085, 0, 1.15, 0, 0.74085, 0, 0.879569, -3, 0.05, -1.8)
+
+[node name="SanctuaryCoral_Brain_4" parent="TheLastReefSanctuary" unique_id=214500303 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(0.178466, 0, 1.034722, 0, 1.05, 0, -1.034722, 0, 0.178466, -1.5, 0.05, 4.2)
+
+[node name="AuthenticCoral_Plate" parent="TheLastReefSanctuary" unique_id=214500105 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(1.194171, 0, 0.3694, 0, 1.25, 0, -0.3694, 0, 1.194171, 0.8, 0.05, -4.5)
+
+[node name="SanctuaryCoral_Plate_2" parent="TheLastReefSanctuary" unique_id=214500311 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(0.907869, 0, -0.621107, 0, 1.1, 0, 0.621107, 0, 0.907869, -1.2, 0.05, -3.8)
+
+[node name="SanctuaryCoral_Plate_3" parent="TheLastReefSanctuary" unique_id=214500312 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(0.589675, 0, 1.15857, 0, 1.3, 0, -1.15857, 0, 0.589675, 4.5, 0.05, 3.2)
+
+[node name="SanctuaryCoral_Plate_4" parent="TheLastReefSanctuary" unique_id=214500313 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(0.203961, 0, -1.18254, 0, 1.2, 0, 1.18254, 0, 0.203961, -4.5, 0.05, 2.5)
+
+[node name="SanctuaryCoral_Plate_5" parent="TheLastReefSanctuary" unique_id=214500314 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(-0.478569, 0, 1.045692, 0, 1.15, 0, -1.045692, 0, -0.478569, 2.5, 0.05, -1.8)
+
+[node name="AuthenticCoral_Red" parent="TheLastReefSanctuary" unique_id=214500101 instance=ExtResource("43_coral_red")]
+transform = Transform3D(1.197379, 0, 0.506244, 0, 1.3, 0, -0.506244, 0, 1.197379, 6.5, 0.05, -0.5)
+
+[node name="SanctuaryCoral_Red_2" parent="TheLastReefSanctuary" unique_id=214500321 instance=ExtResource("43_coral_red")]
+transform = Transform3D(0.990403, 0, -0.677571, 0, 1.2, 0, 0.677571, 0, 0.990403, -6.8, 0.05, 1.2)
+
+[node name="SanctuaryCoral_Red_3" parent="TheLastReefSanctuary" unique_id=214500322 instance=ExtResource("43_coral_red")]
+transform = Transform3D(0.521636, 0, 1.024888, 0, 1.15, 0, -1.024888, 0, 0.521636, 2.2, 0.05, -6.5)
+
+[node name="SanctuaryCoral_Red_4" parent="TheLastReefSanctuary" unique_id=214500323 instance=ExtResource("43_coral_red")]
+transform = Transform3D(0.452947, 0, -1.165049, 0, 1.25, 0, 1.165049, 0, 0.452947, -3.5, 0.05, 5.8)
+
+[node name="SanctuaryCoral_Red_5" parent="TheLastReefSanctuary" unique_id=214500324 instance=ExtResource("43_coral_red")]
+transform = Transform3D(0.745932, 0, 0.939992, 0, 1.2, 0, -0.939992, 0, 0.745932, 5.2, 0.05, 4.8)
+
+[node name="AuthenticCoral_Blue" parent="TheLastReefSanctuary" unique_id=214500102 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(1.096978, 0, -0.599282, 0, 1.25, 0, 0.599282, 0, 1.096978, 5, 0.05, -4.2)
+
+[node name="SanctuaryCoral_Blue_2" parent="TheLastReefSanctuary" unique_id=214500331 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(0.994295, 0, 0.837483, 0, 1.3, 0, -0.837483, 0, 0.994295, -5.2, 0.05, 4.5)
+
+[node name="SanctuaryCoral_Blue_3" parent="TheLastReefSanctuary" unique_id=214500332 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(0.195462, 0, 1.133267, 0, 1.15, 0, -1.133267, 0, 0.195462, -2.8, 0.05, -5.5)
+
+[node name="SanctuaryCoral_Blue_4" parent="TheLastReefSanctuary" unique_id=214500333 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(0.544315, 0, -1.069449, 0, 1.2, 0, 1.069449, 0, 0.544315, 3.8, 0.05, 6.2)
+
+[node name="SanctuaryCoral_Blue_5" parent="TheLastReefSanctuary" unique_id=214500334 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(1.078073, 0, 0.218536, 0, 1.1, 0, -0.218536, 0, 1.078073, -1.8, 0.05, -1.2)
+
+[node name="AuthenticCoral_Lace" parent="TheLastReefSanctuary" unique_id=214500106 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(1.105273, 0, -0.467302, 0, 1.2, 0, 0.467302, 0, 1.105273, -1.8, 0.05, 2.5)
+
+[node name="SanctuaryCoral_Lace_2" parent="TheLastReefSanctuary" unique_id=214500341 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(0.801213, 0, 0.82496, 0, 1.15, 0, -0.82496, 0, 0.801213, 2.5, 0.05, -2.2)
+
+[node name="SanctuaryCoral_Lace_3" parent="TheLastReefSanctuary" unique_id=214500342 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(0.077811, 0, 1.097244, 0, 1.1, 0, -1.097244, 0, 0.077811, -4.8, 0.05, -1.2)
+
+[node name="SanctuaryCoral_Lace_4" parent="TheLastReefSanctuary" unique_id=214500343 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(0.745932, 0, -0.939992, 0, 1.2, 0, 0.939992, 0, 0.745932, 5.5, 0.05, 1.8)
+
+[node name="AuthenticCoral_Single" parent="TheLastReefSanctuary" unique_id=214500104 instance=ExtResource("45_coral_single")]
+transform = Transform3D(0.955336, 0, 0.29552, 0, 1, 0, -0.29552, 0, 0.955336, 1.2, 0.05, 1.8)
+
+[node name="SanctuaryCoral_Single_2" parent="TheLastReefSanctuary" unique_id=214500351 instance=ExtResource("45_coral_single")]
+transform = Transform3D(0.7266, 0, -0.612007, 0, 0.95, 0, 0.612007, 0, 0.7266, -1.5, 0.05, -2.8)
+
+[node name="SanctuaryCoral_Single_3" parent="TheLastReefSanctuary" unique_id=214500352 instance=ExtResource("45_coral_single")]
+transform = Transform3D(0.408237, 0, 0.802087, 0, 0.9, 0, -0.802087, 0, 0.408237, 3.5, 0.05, -5)
+
+[node name="SanctuaryCoral_Single_4" parent="TheLastReefSanctuary" unique_id=214500353 instance=ExtResource("45_coral_single")]
+transform = Transform3D(0.280874, 0, -1.011736, 0, 1.05, 0, 1.011736, 0, 0.280874, -5.8, 0.05, 2.8)
+
+[node name="AuthenticCoral_PackCluster" parent="TheLastReefSanctuary" unique_id=214500107 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(1.013167, 0, 0.42836, 0, 1.1, 0, -0.42836, 0, 1.013167, 2, 0.05, 4.5)
+
+[node name="SanctuaryCoral_Pack_2" parent="TheLastReefSanctuary" unique_id=214500361 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(0.801213, 0, -0.82496, 0, 1.15, 0, 0.82496, 0, 0.801213, -3.5, 0.05, -3.2)
+
+[node name="SanctuaryCoral_Pack_3" parent="TheLastReefSanctuary" unique_id=214500362 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(0.380476, 0, 0.978641, 0, 1.05, 0, -0.978641, 0, 0.380476, 6, 0.05, -3)
+
+[node name="SanctuaryCoral_Pack_4" parent="TheLastReefSanctuary" unique_id=214500363 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(0.077811, 0, -1.097244, 0, 1.1, 0, 1.097244, 0, 0.077811, -6, 0.05, -4.5)
+
+[node name="SanctuaryGrass_1" parent="TheLastReefSanctuary" unique_id=677161438 instance=ExtResource("50_underwater_plant")]
+transform = Transform3D(1.078073, 0, 0.218536, 0, 1.1, 0, -0.218536, 0, 1.078073, -0.8, 0.05, -1)
+
+[node name="SanctuaryGrass_2" parent="TheLastReefSanctuary" unique_id=7358592 instance=ExtResource("50_underwater_plant")]
+transform = Transform3D(0.877583, 0, -0.479426, 0, 1, 0, 0.479426, 0, 0.877583, 1.8, 0.05, 0.8)
+
+[node name="SanctuaryGrass_3" parent="TheLastReefSanctuary" unique_id=889482975 instance=ExtResource("50_underwater_plant")]
+transform = Transform3D(0.434829, 0, 1.118447, 0, 1.2, 0, -1.118447, 0, 0.434829, -3.2, 0.05, 1)
+
+[node name="SanctuaryGrass_4" parent="TheLastReefSanctuary" unique_id=2098148091 instance=ExtResource("50_underwater_plant")]
+transform = Transform3D(0.62161, 0, -0.783327, 0, 1, 0, 0.783327, 0, 0.62161, 3, 0.05, -3.5)
+
+[node name="SanctuaryGrass_5" parent="TheLastReefSanctuary" unique_id=1467262388 instance=ExtResource("50_underwater_plant")]
+transform = Transform3D(1.013167, 0, 0.42836, 0, 1.1, 0, -0.42836, 0, 1.013167, -1, 0.05, 5)
+
+[node name="SanctuaryGrass_6" parent="TheLastReefSanctuary" unique_id=641208486 instance=ExtResource("50_underwater_plant")]
+transform = Transform3D(0.307624, 0, -1.108092, 0, 1.15, 0, 1.108092, 0, 0.307624, 4.8, 0.05, 1)
+
+[node name="SanctuaryGrass_7" parent="TheLastReefSanctuary" unique_id=739017527 instance=ExtResource("50_underwater_plant")]
+transform = Transform3D(0.866602, 0, 0.592875, 0, 1.05, 0, -0.592875, 0, 0.866602, -4.5, 0.05, -5)
+
+[node name="SanctuaryGrass_8" parent="TheLastReefSanctuary" unique_id=1278371806 instance=ExtResource("50_underwater_plant")]
+transform = Transform3D(0.917811, 0, -0.773061, 0, 1.2, 0, 0.773061, 0, 0.917811, 0.5, 0.05, -6)
+
+[node name="SchoolFish1" parent="TheLastReefSanctuary" unique_id=1441840322 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 3.8, -0.5)
+swim_radius_x = 6.5
+swim_radius_z = 6.5
+swim_speed = 1.0
+
+[node name="SchoolFish2" parent="TheLastReefSanctuary" unique_id=1729323997 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(0.866, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866, 2.5, 4.4, 1.8)
+swim_radius_z = 7.5
+swim_speed = 1.1
+
+[node name="SchoolFish3" parent="TheLastReefSanctuary" unique_id=1163563979 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(0.707, 0, -0.707, 0, 1, 0, 0.707, 0, 0.707, 0.5, 5, -2.5)
+swim_radius_x = 7.5
+swim_radius_z = 5.0
+
+[node name="SchoolFish4" parent="TheLastReefSanctuary" unique_id=1919632031 instance=ExtResource("33_school_fish_scene")]
+transform = Transform3D(0.5, 0, 0.866, 0, 1, 0, -0.866, 0, 0.5, -3, 4.2, 2)
+swim_radius_x = 5.5
+swim_speed = 1.05
+
+[node name="Sanctuary_Levrek" parent="TheLastReefSanctuary" unique_id=1982736471 instance=ExtResource("35_fish_levrek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 3.5, -2)
+patrol_radius_x = 5.5
+patrol_radius_z = 5.5
+
+[node name="Sanctuary_Sargos" parent="TheLastReefSanctuary" unique_id=1982736472 instance=ExtResource("36_fish_sargos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 3.2, 2.5)
+patrol_radius_x = 4.5
+patrol_radius_z = 4.5
+swim_speed = 0.9
+
+[node name="Sanctuary_Thalassoma" parent="TheLastReefSanctuary" unique_id=1982736473 instance=ExtResource("37_fish_thalassoma")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.2, 3)
+patrol_radius_x = 5.0
+patrol_radius_z = 5.0
+swim_speed = 1.1
+
+[node name="Sanctuary_Symphodus" parent="TheLastReefSanctuary" unique_id=1982736474 instance=ExtResource("38_fish_symphodus")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 2.8, -3.5)
+patrol_radius_x = 4.5
+patrol_radius_z = 4.5
+swim_speed = 0.95
+
+[node name="OkyanusKasifi_Atlas" parent="TheLastReefSanctuary" unique_id=357643520 instance=ExtResource("61_kasif_turtle")]
+explorer_name = "🐢 Kâşif Atlas (Öncü Kâşif)"
+orbit_radius_x = 9.5
+orbit_radius_z = 7.5
+orbit_speed = 0.28
+altitude_amplitude = 0.7
+turtle_scale = 0.8
+
+[node name="OkyanusKasifi_Defne" parent="TheLastReefSanctuary" unique_id=832098615 instance=ExtResource("61_kasif_turtle")]
+explorer_name = "🐢 Kâşif Defne (Gözlemci Kâşif)"
+greeting_text = "Birlikte başardık! Kanyon ve resif yeniden nefes alıyor!"
+patrol_center = Vector3(-68, -4.6, -10)
+orbit_radius_x = 7.0
+orbit_radius_z = 8.5
+orbit_speed = 0.33
+phase_offset = 2.1
+altitude_base = -4.6
+altitude_amplitude = 0.6
+flipper_speed = 1.0
+turtle_scale = 0.74
+
+[node name="OkyanusKasifi_Ege" parent="TheLastReefSanctuary" unique_id=1842405662 instance=ExtResource("61_kasif_turtle")]
+explorer_name = "🐢 Kâşif Ege (Genç Kâşif)"
+greeting_text = "Sıcak dalgayı atlattık, mercanlar çiçek açıyor!"
+patrol_center = Vector3(-68, -3.8, -10)
+orbit_radius_x = 5.2
+orbit_radius_z = 5.0
+orbit_speed = 0.38
+phase_offset = 4.2
+altitude_base = -3.8
+altitude_amplitude = 0.85
+flipper_speed = 1.1
+turtle_scale = 0.66
+
+[node name="CoralGarden" type="Node3D" parent="." unique_id=663061900]
+
+[node name="GardenCoral_Red_1" parent="CoralGarden" unique_id=214500201 instance=ExtResource("43_coral_red")]
+transform = Transform3D(-0.419154, 0, 0.890425, 0, 0.984147, 0, -0.890425, 0, -0.419154, 43.13, -7.48, -10.03)
+
+[node name="GardenCoral_Blue_1" parent="CoralGarden" unique_id=214500202 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(0.912556, 0, 0.302034, 0, 0.961241, 0, -0.302034, 0, 0.912556, 39.32, -7.48, 13.91)
+
+[node name="GardenCoral_Brain_1" parent="CoralGarden" unique_id=214500203 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(0.470046, 0, 0.897265, 0, 1.01293, 0, -0.897265, 0, 0.470046, 56.28, -7.48, 2.3)
+
+[node name="GardenCoral_Plate_1" parent="CoralGarden" unique_id=214500204 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(-1.065237, 0, 0.381994, 0, 1.131658, 0, -0.381994, 0, -1.065237, 57.38, -7.48, -19.27)
+
+[node name="GardenCoral_Lace_1" parent="CoralGarden" unique_id=214500205 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(0.808872, 0, 0.614409, 0, 1.015762, 0, -0.614409, 0, 0.808872, 66.79, -7.48, 20.92)
+
+[node name="GardenCoral_Single_1" parent="CoralGarden" unique_id=214500206 instance=ExtResource("45_coral_single")]
+transform = Transform3D(-0.483355, 0, -0.819421, 0, 0.951359, 0, 0.819421, 0, -0.483355, 77.79, -7.48, -17.91)
+
+[node name="GardenCoral_Pack_1" parent="CoralGarden" unique_id=214500207 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(-0.171334, 0, -1.034919, 0, 1.049006, 0, 1.034919, 0, -0.171334, 45.83, -7.48, 28.92)
+
+[node name="GardenCoral_Gold_1" parent="CoralGarden" unique_id=214500208 instance=ExtResource("62_coral_gold")]
+transform = Transform3D(-0.764036, 0, 0.817265, 0, 1.118782, 0, -0.817265, 0, -0.764036, 71.59, -7.48, 43.18)
+
+[node name="GardenCoral_Purple_1" parent="CoralGarden" unique_id=214500209 instance=ExtResource("63_coral_purple")]
+transform = Transform3D(-0.385909, 0, 0.968402, 0, 1.042463, 0, -0.968402, 0, -0.385909, 14.77, -7.48, 3.75)
+
+[node name="GardenCoral_Emerald_1" parent="CoralGarden" unique_id=214500210 instance=ExtResource("64_coral_emerald")]
+transform = Transform3D(0.427568, 0, -0.883513, 0, 0.981535, 0, 0.883513, 0, 0.427568, 34.71, -7.48, 43.83)
+
+[node name="GardenCoral_Red_2" parent="CoralGarden" unique_id=214500211 instance=ExtResource("43_coral_red")]
+transform = Transform3D(-0.585874, 0, -0.795323, 0, 0.98782, 0, 0.795323, 0, -0.585874, 23.77, -7.48, 28.23)
+
+[node name="GardenCoral_Blue_2" parent="CoralGarden" unique_id=214500212 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(0.964572, 0, 0.172998, 0, 0.979963, 0, -0.172998, 0, 0.964572, 73.03, -7.48, -2.08)
+
+[node name="GardenCoral_Brain_2" parent="CoralGarden" unique_id=214500213 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(0.332422, 0, 0.95966, 0, 1.015604, 0, -0.95966, 0, 0.332422, 10.4, -7.48, 61.35)
+
+[node name="GardenCoral_Plate_2" parent="CoralGarden" unique_id=214500214 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(1.050803, 0, -0.394934, 0, 1.122569, 0, 0.394934, 0, 1.050803, 76.47, -7.48, -34.68)
+
+[node name="GardenCoral_Lace_2" parent="CoralGarden" unique_id=214500215 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(-1.002663, 0, -0.476255, 0, 1.110024, 0, 0.476255, 0, -1.002663, 54.61, -7.48, 50.25)
+
+[node name="GardenCoral_Single_2" parent="CoralGarden" unique_id=214500216 instance=ExtResource("45_coral_single")]
+transform = Transform3D(-0.705337, 0, -0.838748, 0, 1.095901, 0, 0.838748, 0, -0.705337, 80.71, -7.48, -54.29)
+
+[node name="GardenCoral_Pack_2" parent="CoralGarden" unique_id=214500217 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(0.92948, 0, -0.49091, 0, 1.051154, 0, 0.49091, 0, 0.92948, 75.84, -7.48, -70.53)
+
+[node name="GardenCoral_Gold_2" parent="CoralGarden" unique_id=214500218 instance=ExtResource("62_coral_gold")]
+transform = Transform3D(-0.85018, 0, -0.672539, 0, 1.084027, 0, 0.672539, 0, -0.85018, 82.73, -7.48, 63.43)
+
+[node name="GardenCoral_Purple_2" parent="CoralGarden" unique_id=214500219 instance=ExtResource("63_coral_purple")]
+transform = Transform3D(0.848443, 0, 0.607576, 0, 1.043554, 0, -0.607576, 0, 0.848443, 63.17, -7.48, 73.31)
+
+[node name="GardenCoral_Emerald_2" parent="CoralGarden" unique_id=214500220 instance=ExtResource("64_coral_emerald")]
+transform = Transform3D(0.1389, 0, 1.118719, 0, 1.127309, 0, -1.118719, 0, 0.1389, -6.01, -7.48, 66.11)
+
+[node name="GardenCoral_Red_3" parent="CoralGarden" unique_id=214500221 instance=ExtResource("43_coral_red")]
+transform = Transform3D(0.694363, 0, -0.717535, 0, 0.998497, 0, 0.717535, 0, 0.694363, 60.04, -7.48, -80.36)
+
+[node name="GardenCoral_Blue_3" parent="CoralGarden" unique_id=214500222 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(1.055691, 0, -0.022052, 0, 1.055922, 0, 0.022052, 0, 1.055691, 84.82, -7.48, 11.76)
+
+[node name="GardenCoral_Brain_3" parent="CoralGarden" unique_id=214500223 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(-0.023245, 0, -1.143009, 0, 1.143245, 0, 1.143009, 0, -0.023245, 42.21, -7.48, 74.61)
+
+[node name="GardenCoral_Plate_3" parent="CoralGarden" unique_id=214500224 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(0.591792, 0, -0.971781, 0, 1.137794, 0, 0.971781, 0, 0.591792, 27.07, -7.48, 60.86)
+
+[node name="GardenCoral_Lace_3" parent="CoralGarden" unique_id=214500225 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(0.107403, 0, -1.07742, 0, 1.08276, 0, 1.07742, 0, 0.107403, 37.74, -7.48, -84.55)
+
+[node name="GardenCoral_Single_3" parent="CoralGarden" unique_id=214500226 instance=ExtResource("45_coral_single")]
+transform = Transform3D(0.511254, 0, -0.922279, 0, 1.054504, 0, 0.922279, 0, 0.511254, 2.75, -7.48, 81.46)
+
+[node name="GardenCoral_Pack_3" parent="CoralGarden" unique_id=214500227 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(0.787494, 0, 0.547659, 0, 0.959206, 0, -0.547659, 0, 0.787494, -14.45, -7.48, 8.04)
+
+[node name="GardenCoral_Gold_3" parent="CoralGarden" unique_id=214500228 instance=ExtResource("62_coral_gold")]
+transform = Transform3D(1.041698, 0, 0.307443, 0, 1.086119, 0, -0.307443, 0, 1.041698, 22.07, -7.48, -10.79)
+
+[node name="GardenCoral_Purple_3" parent="CoralGarden" unique_id=214500229 instance=ExtResource("63_coral_purple")]
+transform = Transform3D(0.377548, 0, 1.046795, 0, 1.112799, 0, -1.046795, 0, 0.377548, 20.59, -7.48, 81.82)
+
+[node name="GardenCoral_Emerald_3" parent="CoralGarden" unique_id=214500230 instance=ExtResource("64_coral_emerald")]
+transform = Transform3D(-0.040294, 0, -0.99243, 0, 0.993248, 0, 0.99243, 0, -0.040294, 82.56, -7.48, 30.65)
+
+[node name="GardenCoral_Red_4" parent="CoralGarden" unique_id=214500231 instance=ExtResource("43_coral_red")]
+transform = Transform3D(-1.041331, 0, -0.459368, 0, 1.138151, 0, 0.459368, 0, -1.041331, -25.07, -7.48, 61.14)
+
+[node name="GardenCoral_Blue_4" parent="CoralGarden" unique_id=214500232 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(-0.795782, 0, 0.827579, 0, 1.14811, 0, -0.827579, 0, -0.795782, -31.8, -7.48, 79.06)
+
+[node name="GardenCoral_Brain_4" parent="CoralGarden" unique_id=214500233 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(-0.745489, 0, 0.606735, 0, 0.961187, 0, -0.606735, 0, -0.745489, -37.9, -7.48, 49.17)
+
+[node name="GardenCoral_Plate_4" parent="CoralGarden" unique_id=214500234 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(-1.082414, 0, -0.329506, 0, 1.131456, 0, 0.329506, 0, -1.082414, -24.96, -7.48, 36.06)
+
+[node name="GardenCoral_Lace_4" parent="CoralGarden" unique_id=214500235 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(-0.275414, 0, -0.934852, 0, 0.974577, 0, 0.934852, 0, -0.275414, -52.61, -7.48, 27.17)
+
+[node name="GardenCoral_Single_4" parent="CoralGarden" unique_id=214500236 instance=ExtResource("45_coral_single")]
+transform = Transform3D(0.2549, 0, 0.972964, 0, 1.005799, 0, -0.972964, 0, 0.2549, -38.27, -7.48, 8.27)
+
+[node name="GardenCoral_Pack_4" parent="CoralGarden" unique_id=214500237 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(-0.473935, 0, -0.999574, 0, 1.106238, 0, 0.999574, 0, -0.473935, -22.1, -7.48, -6.98)
+
+[node name="GardenCoral_Gold_4" parent="CoralGarden" unique_id=214500238 instance=ExtResource("62_coral_gold")]
+transform = Transform3D(1.039056, 0, 0.352957, 0, 1.097368, 0, -0.352957, 0, 1.039056, -49.95, -7.48, 69.49)
+
+[node name="GardenCoral_Purple_4" parent="CoralGarden" unique_id=214500239 instance=ExtResource("63_coral_purple")]
+transform = Transform3D(-0.68509, 0, -0.919698, 0, 1.146818, 0, 0.919698, 0, -0.68509, -62.37, -7.48, 51.82)
+
+[node name="GardenCoral_Emerald_4" parent="CoralGarden" unique_id=214500240 instance=ExtResource("64_coral_emerald")]
+transform = Transform3D(0.550993, 0, -0.92868, 0, 1.079833, 0, 0.92868, 0, 0.550993, -15.41, -7.48, 84.66)
+
+[node name="GardenCoral_Red_5" parent="CoralGarden" unique_id=214500241 instance=ExtResource("43_coral_red")]
+transform = Transform3D(1.089006, 0, -0.257332, 0, 1.118997, 0, 0.257332, 0, 1.089006, -38.03, -7.48, -24.08)
+
+[node name="GardenCoral_Blue_5" parent="CoralGarden" unique_id=214500242 instance=ExtResource("44_coral_blue")]
+transform = Transform3D(0.979004, 0, -0.201693, 0, 0.999565, 0, 0.201693, 0, 0.979004, -41.65, -7.48, -42.33)
+
+[node name="GardenCoral_Brain_5" parent="CoralGarden" unique_id=214500243 instance=ExtResource("46_coral_brain")]
+transform = Transform3D(-0.10028, 0, -1.012343, 0, 1.017298, 0, 1.012343, 0, -0.10028, -69.13, -7.48, 17.23)
+
+[node name="GardenCoral_Plate_5" parent="CoralGarden" unique_id=214500244 instance=ExtResource("47_coral_plate")]
+transform = Transform3D(-0.34244, 0, 0.944929, 0, 1.005065, 0, -0.944929, 0, -0.34244, -73.42, -7.48, 73.9)
+
+[node name="GardenCoral_Lace_5" parent="CoralGarden" unique_id=214500245 instance=ExtResource("48_coral_lace")]
+transform = Transform3D(-0.058784, 0, 1.104692, 0, 1.106255, 0, -1.104692, 0, -0.058784, -82.9, -7.48, 35.75)
+
+[node name="GardenCoral_Single_5" parent="CoralGarden" unique_id=214500246 instance=ExtResource("45_coral_single")]
+transform = Transform3D(0.91552, 0, 0.690053, 0, 1.146452, 0, -0.690053, 0, 0.91552, -81.37, -7.48, 52.35)
+
+[node name="GardenCoral_Pack_5" parent="CoralGarden" unique_id=214500247 instance=ExtResource("49_coral_pack")]
+transform = Transform3D(0.146043, 0, 0.964232, 0, 0.975229, 0, -0.964232, 0, 0.146043, -60.28, -7.48, 84)
+
+[node name="GardenCoral_Gold_5" parent="CoralGarden" unique_id=214500248 instance=ExtResource("62_coral_gold")]
+transform = Transform3D(0.371318, 0, -1.059677, 0, 1.12285, 0, 1.059677, 0, 0.371318, -25.09, -7.48, -36.69)
+
+[node name="GardenCoral_Purple_5" parent="CoralGarden" unique_id=214500249 instance=ExtResource("63_coral_purple")]
+transform = Transform3D(0.551863, 0, 0.951367, 0, 1.099842, 0, -0.951367, 0, 0.551863, -82.75, -7.48, 4.23)
+
+[node name="GardenCoral_Emerald_5" parent="CoralGarden" unique_id=214500250 instance=ExtResource("64_coral_emerald")]
+transform = Transform3D(-0.271403, 0, -0.96116, 0, 0.998743, 0, 0.96116, 0, -0.271403, -55.28, -7.48, -26.3)
+
+[node name="JellyfishAndTraps" type="Node3D" parent="." unique_id=1786156470]
+
+[node name="JellyMed1" parent="JellyfishAndTraps" unique_id=346699914 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.5, -12)
+
+[node name="JellyMed2" parent="JellyfishAndTraps" unique_id=1550717965 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -3, -14)
+
+[node name="JellyMed3" parent="JellyfishAndTraps" unique_id=1199641245 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28, -2.5, -22)
+
+[node name="JellyMed4" parent="JellyfishAndTraps" unique_id=815164521 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36, -3, -14)
+
+[node name="JellyMed5" parent="JellyfishAndTraps" unique_id=1895076234 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, -2.2, -44)
+
+[node name="JellyMed6" parent="JellyfishAndTraps" unique_id=472775668 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, -3, -54)
+
+[node name="JellyMed7" parent="JellyfishAndTraps" unique_id=587958769 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38, -2.8, -22)
+
+[node name="JellyMed8" parent="JellyfishAndTraps" unique_id=1171587656 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48, -2.8, -34)
+
+[node name="JellyMed9" parent="JellyfishAndTraps" unique_id=1382868833 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52, -2.5, -14)
+
+[node name="JellyMed10" parent="JellyfishAndTraps" unique_id=660823263 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76, -2.6, -32)
+
+[node name="JellyMed11" parent="JellyfishAndTraps" unique_id=1391926061 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90, -2.5, -20)
+
+[node name="JellyMed12" parent="JellyfishAndTraps" unique_id=1037885602 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -104, -2.8, -32)
+
+[node name="JellyMed13" parent="JellyfishAndTraps" unique_id=199130039 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -116, -3, -18)
+
+[node name="JellyMed14" parent="JellyfishAndTraps" unique_id=421977285 instance=ExtResource("26_jelly_med")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -122, -3.2, -32)
+
+[node name="JellyRho1" parent="JellyfishAndTraps" unique_id=24057547 instance=ExtResource("27_jelly_rho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -26)
+
+[node name="JellyRho2" parent="JellyfishAndTraps" unique_id=51740562 instance=ExtResource("27_jelly_rho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26, -2.2, -36)
+
+[node name="JellyRho3" parent="JellyfishAndTraps" unique_id=2035988083 instance=ExtResource("27_jelly_rho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27, -2.2, -38)
+
+[node name="JellyRho4" parent="JellyfishAndTraps" unique_id=66137660 instance=ExtResource("27_jelly_rho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42, -2.4, -26)
+
+[node name="JellyRho5" parent="JellyfishAndTraps" unique_id=901062123 instance=ExtResource("27_jelly_rho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58, -2.4, -36)
+
+[node name="JellyRho6" parent="JellyfishAndTraps" unique_id=1760440424 instance=ExtResource("27_jelly_rho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -84, -2.5, -20)
+
+[node name="JellyRho7" parent="JellyfishAndTraps" unique_id=1314028717 instance=ExtResource("27_jelly_rho")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, -2.5, -50)
+
+[node name="BagTrap1" parent="JellyfishAndTraps" unique_id=773355999 instance=ExtResource("28_bag_trap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -2.6, -18)
+
+[node name="BagTrap2" parent="JellyfishAndTraps" unique_id=2006678081 instance=ExtResource("28_bag_trap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31, -2.6, -32)
+
+[node name="BagTrap3" parent="JellyfishAndTraps" unique_id=27579314 instance=ExtResource("28_bag_trap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, -2.4, -14)
+
+[node name="BagTrap4" parent="JellyfishAndTraps" unique_id=71637606 instance=ExtResource("28_bag_trap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, -2.6, -26)
+
+[node name="BagTrap5" parent="JellyfishAndTraps" unique_id=1874901197 instance=ExtResource("28_bag_trap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80, -2.5, -22)
+
+[node name="BagTrap6" parent="JellyfishAndTraps" unique_id=1120607404 instance=ExtResource("28_bag_trap")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -102, -2.6, -26)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=197139688]
+process_mode = 3
+script = ExtResource("3_hud")
+
+[node name="LogoContainer" type="PanelContainer" parent="HUD" unique_id=1982736490]
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 214.0
+offset_bottom = 82.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_logo_deck")
+
+[node name="HBoxLogos" type="HBoxContainer" parent="HUD/LogoContainer" unique_id=1982736491]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LogoCOP31" type="TextureRect" parent="HUD/LogoContainer/HBoxLogos" unique_id=1982736492]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+tooltip_text = "Birleşmiş Milletler İklim Değişikliği Konferansı (COP31)"
+texture = ExtResource("65_logo_cop31")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LogoSDG14" type="TextureRect" parent="HUD/LogoContainer/HBoxLogos" unique_id=1982736493]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+tooltip_text = "BM Sürdürülebilir Kalkınma Amacı 14: Sudaki Yaşam (Life Below Water)"
+texture = ExtResource("66_logo_sdg14")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="LogoSDG13" type="TextureRect" parent="HUD/LogoContainer/HBoxLogos" unique_id=1982736494]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+tooltip_text = "BM Sürdürülebilir Kalkınma Amacı 13: İklim Eylemi (Climate Action)"
+texture = ExtResource("67_logo_sdg13")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MarginContainer" type="PanelContainer" parent="HUD" unique_id=720543494]
+offset_left = 18.0
+offset_top = 88.0
+offset_right = 230.0
+offset_bottom = 196.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_telemetry_deck")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/MarginContainer" unique_id=1574571784]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="NameLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=1393750605]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.35, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 12
+text = "🐢 CARETTA TELEMETRİ"
+
+[node name="HealthBar" type="ProgressBar" parent="HUD/MarginContainer/VBoxContainer" unique_id=1148265034]
+custom_minimum_size = Vector2(184, 8)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_health_fill")
+value = 100.0
+show_percentage = false
+
+[node name="StaminaBar" type="ProgressBar" parent="HUD/MarginContainer/VBoxContainer" unique_id=231671338]
+custom_minimum_size = Vector2(184, 5)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg")
+theme_override_styles/fill = SubResource("StyleBoxFlat_stamina_fill")
+value = 100.0
+show_percentage = false
+
+[node name="InventoryLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=1291736900]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.92, 0.96, 1)
+theme_override_font_sizes/font_size = 11
+text = "🎒 Atıklar: 0 / 15"
+
+[node name="ControlsLabel" type="Label" parent="HUD/MarginContainer/VBoxContainer" unique_id=198484739]
+visible = false
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HUD" unique_id=802775878]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 40.0
+offset_right = 300.0
+offset_bottom = 120.0
+grow_horizontal = 2
+
+[node name="VBoxWarnings" type="VBoxContainer" parent="HUD/CenterContainer" unique_id=740779973]
+layout_mode = 2
+
+[node name="WarningLabel" type="Label" parent="HUD/CenterContainer/VBoxWarnings" unique_id=908220165]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.2, 0.2, 1)
+theme_override_font_sizes/font_size = 20
+text = "⚠️ DİKKAT: AŞIRI SICAK SU AKINTISI! (ISI HASARI)"
+
+[node name="SealAlert" type="Label" parent="HUD/CenterContainer/VBoxWarnings" unique_id=135811701]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.35, 0.1, 1)
+theme_override_font_sizes/font_size = 22
+text = "🚨 DİKKAT: AKDENİZ FOKU PEŞİNDE! [SHIFT] İLE HIZLA KAÇ!"
+
+[node name="InteractHint" type="Label" parent="HUD" unique_id=1267620069]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 40.0
+offset_right = 200.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 0.92, 0.72, 1)
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_interact_hint")
+text = "◆ [E] Tuşuna Bas: Kadim Pina ile Konuş ◆"
+horizontal_alignment = 1
+
+[node name="BadgePanel" type="PanelContainer" parent="HUD" unique_id=1757327320]
+visible = false
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.0
+offset_top = 22.0
+offset_right = 210.0
+offset_bottom = 106.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_telemetry_deck")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/BadgePanel" unique_id=1019610495]
+layout_mode = 2
+
+[node name="BadgeTitle" type="Label" parent="HUD/BadgePanel/VBoxContainer" unique_id=911143999]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.84, 0, 1)
+text = "🎖️ ROZET KAZANILDI"
+horizontal_alignment = 1
+
+[node name="BadgeDesc" type="Label" parent="HUD/BadgePanel/VBoxContainer" unique_id=275834650]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+text = "İlk atığı başarıyla geri dönüşüme kazandırdın!"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="InventoryPanel" type="PanelContainer" parent="HUD" unique_id=521952384]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -210.0
+offset_right = 230.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_inventory")
+
+[node name="VBoxMain" type="VBoxContainer" parent="HUD/InventoryPanel" unique_id=1644511033]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="HBoxHeader" type="HBoxContainer" parent="HUD/InventoryPanel/VBoxMain" unique_id=35603123]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="HUD/InventoryPanel/VBoxMain/HBoxHeader" unique_id=206542306]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.35, 0.85, 1, 1)
+theme_override_font_sizes/font_size = 18
+text = "🎒 KABUK ENVANTERİ"
+
+[node name="CloseBtn" type="Button" parent="HUD/InventoryPanel/VBoxMain/HBoxHeader" unique_id=1013324596]
+custom_minimum_size = Vector2(30, 26)
+layout_mode = 2
+text = "✕"
+
+[node name="CapacityLabel" type="Label" parent="HUD/InventoryPanel/VBoxMain" unique_id=1734928910]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.8, 0.8, 1)
+theme_override_font_sizes/font_size = 13
+text = "Taşınan Geri Dönüştürülebilir Atık: 0 / 15 Adet"
+
+[node name="HSeparator" type="HSeparator" parent="HUD/InventoryPanel/VBoxMain" unique_id=420891948]
+layout_mode = 2
+
+[node name="EmptyLabel" type="Label" parent="HUD/InventoryPanel/VBoxMain" unique_id=1164682448]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.7, 0.75, 1)
+theme_override_font_sizes/font_size = 13
+text = "(Envanterin boş. Deniz tabanındaki atıkları topla!)"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="HUD/InventoryPanel/VBoxMain" unique_id=601598487]
+custom_minimum_size = Vector2(0, 220)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemList" type="VBoxContainer" parent="HUD/InventoryPanel/VBoxMain/ScrollContainer" unique_id=1124711614]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="FooterLabel" type="Label" parent="HUD/InventoryPanel/VBoxMain" unique_id=258725956]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.6, 0.65, 1)
+theme_override_font_sizes/font_size = 11
+text = "İpucu: İstediğin atığı 'Bırak' ile denize bırakabilir veya [I]/[ESC] ile kapatabilirsin."
+horizontal_alignment = 1
+
+[node name="DialogueBox" type="Control" parent="HUD" unique_id=543307235]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("5_dialogue")
+
+[node name="Panel" type="PanelContainer" parent="HUD/DialogueBox" unique_id=1171410206]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -480.0
+offset_top = -245.0
+offset_right = 480.0
+offset_bottom = -35.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_dialogue")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/DialogueBox/Panel" unique_id=922271437]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxHeader" type="HBoxContainer" parent="HUD/DialogueBox/Panel/VBoxContainer" unique_id=1345210814]
+layout_mode = 2
+
+[node name="NameplatePanel" type="PanelContainer" parent="HUD/DialogueBox/Panel/VBoxContainer/HBoxHeader" unique_id=987654321]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_nameplate")
+
+[node name="SpeakerLabel" type="Label" parent="HUD/DialogueBox/Panel/VBoxContainer/HBoxHeader/NameplatePanel" unique_id=1973768299]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.91, 0.68, 1)
+theme_override_font_sizes/font_size = 18
+text = "◆ Kadim Pina ◆"
+
+[node name="Spacer" type="Control" parent="HUD/DialogueBox/Panel/VBoxContainer/HBoxHeader" unique_id=987654322]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="PageLabel" type="Label" parent="HUD/DialogueBox/Panel/VBoxContainer/HBoxHeader" unique_id=1897738610]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.8, 0.85, 0.92, 0.85)
+theme_override_font_sizes/font_size = 14
+text = "✦ (1 / 4) ✦"
+
+[node name="HSeparator" type="HSeparator" parent="HUD/DialogueBox/Panel/VBoxContainer" unique_id=1254167774]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_genshin_sep")
+
+[node name="TextLabel" type="Label" parent="HUD/DialogueBox/Panel/VBoxContainer" unique_id=706055480]
+custom_minimum_size = Vector2(860, 108)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.95, 0.98, 1)
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 17
+autowrap_mode = 2
+visible_characters_behavior = 1
+
+[node name="PromptLabel" type="Label" parent="HUD/DialogueBox/Panel/VBoxContainer" unique_id=1384928333]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.52, 1)
+theme_override_font_sizes/font_size = 14
+text = "Devam Et [ Boşluk / E ]  ▼"
+horizontal_alignment = 2

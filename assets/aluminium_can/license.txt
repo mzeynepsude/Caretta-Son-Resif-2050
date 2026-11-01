@@ -1,0 +1,8 @@
+Model Information:
+* title:	aluminium can- 350ml
+* source:	https://sketchfab.com/3d-models/aluminium-can-350ml-11c8a189535f42a8b39efd541cef41d4
+* author:	Jeferson Camargo Brasil (https://sketchfab.com/sidbeyond)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

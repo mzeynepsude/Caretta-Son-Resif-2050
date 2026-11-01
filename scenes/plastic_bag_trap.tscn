@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://plastic_bag_trap_01"]
+
+[ext_resource type="Script" path="res://scripts/plastic_bag_trap.gd" id="1_script"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_detect"]
+radius = 1.2
+
+[sub_resource type="StandardMaterial3D" id="Material_plastic_film"]
+transparency = 1
+albedo_color = Color(0.9, 0.95, 1, 0.45)
+metallic = 0.25
+roughness = 0.15
+emission_enabled = true
+emission = Color(0.8, 0.9, 1, 1)
+emission_energy_multiplier = 0.25
+
+[sub_resource type="SphereMesh" id="SphereMesh_bag_body"]
+material = SubResource("Material_plastic_film")
+radius = 0.26
+height = 0.32
+
+[sub_resource type="TorusMesh" id="TorusMesh_handle"]
+material = SubResource("Material_plastic_film")
+inner_radius = 0.06
+outer_radius = 0.1
+
+[node name="PlasticBagTrap" type="Area3D"]
+script = ExtResource("1_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_detect")
+
+[node name="VisualRoot" type="Node3D" parent="."]
+
+[node name="BagBody" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0)
+mesh = SubResource("SphereMesh_bag_body")
+
+[node name="HandleLeft" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, -0.16, -0.15, 0)
+mesh = SubResource("TorusMesh_handle")
+
+[node name="HandleRight" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0.16, -0.15, 0)
+mesh = SubResource("TorusMesh_handle")
+
+[node name="AuraLight" type="OmniLight3D" parent="."]
+light_color = Color(0.85, 0.95, 1, 1)
+light_energy = 1.2
+omni_range = 4.5

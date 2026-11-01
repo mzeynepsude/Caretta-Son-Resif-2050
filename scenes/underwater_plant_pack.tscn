@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/plants/underwater_plant_pack/scene.gltf" id="1_plant_pack_gltf"]
+
+[node name="UnderwaterPlantPack" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_plant_pack_gltf")]
+transform = Transform3D(0.1000, 0, 0, 0, 0.1000, 0, 0, 0, 0.1000, 0, 0.0342, 0)

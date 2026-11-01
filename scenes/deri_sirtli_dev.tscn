@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://deri_sirtli_dev_01"]
+
+[ext_resource type="Script" path="res://scripts/deri_sirtli_dev.gd" id="1_dev"]
+[ext_resource type="PackedScene" path="res://assets/sea_turtle/scene.gltf" id="2_model"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dev"]
+radius = 6.0
+
+[node name="DeriSirtliDev" type="Area3D"]
+script = ExtResource("1_dev")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_dev")
+
+[node name="TurtleModel" parent="." instance=ExtResource("2_model")]
+transform = Transform3D(-2.1, 0, 0, 0, 2.1, 0, 0, 0, -2.1, 0, 0, 0)
+
+[node name="AuraLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2, 0)
+light_color = Color(0.25, 0.7, 1, 1)
+light_energy = 1.6
+omni_range = 14.0
+

@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/single_fish.gd" id="1_fish_script"]
+[ext_resource type="PackedScene" path="res://assets/fish/wrasse_symphodus/scene.gltf" id="2_symphodus_scene"]
+
+[node name="FishSymphodus" type="Node3D"]
+script = ExtResource("1_fish_script")
+species_name = "Symphodus"
+patrol_radius_x = 4.2
+patrol_radius_z = 4.2
+swim_speed = 0.9
+
+[node name="SymphodusModel" parent="." instance=ExtResource("2_symphodus_scene")]
+transform = Transform3D(0, 0, -0.16, 0, 0.16, 0, 0.16, 0, 0, 0, 0, 0)
+

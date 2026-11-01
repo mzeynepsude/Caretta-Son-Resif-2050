@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/single_fish.gd" id="1_fish_script"]
+[ext_resource type="PackedScene" path="res://assets/fish/sargos_striped/scene.gltf" id="2_sargos_scene"]
+
+[node name="FishSargos" type="Node3D"]
+script = ExtResource("1_fish_script")
+species_name = "Sargos"
+patrol_radius_x = 4.0
+patrol_radius_z = 4.0
+swim_speed = 0.85
+
+[node name="SargosModel" parent="." instance=ExtResource("2_sargos_scene")]
+transform = Transform3D(-0.18, 0, 0, 0, 0.18, 0, 0, 0, -0.18, 0, 0, 0)
+

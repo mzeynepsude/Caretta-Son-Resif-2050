@@ -1,0 +1,8 @@
+Model Information:
+* title:	Sea Fish
+* source:	https://sketchfab.com/3d-models/sea-fish-5d654c67e47f403b88cf246d099dcc29
+* author:	MaxLeburo (https://sketchfab.com/MaxLeburo)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

@@ -1,0 +1,237 @@
+{
+  "project": "CARETTA: SON RESİF 2050",
+  "theme": "COP31 Türkiye Antalya - Mavi Akdeniz",
+  "core_goal": "Fırtınada kaybettiğimiz Okyanus Kâşifleri ekibini bulmak ve onlarla birlikte 'Son Resif'i kurtarmak.",
+  "characters": {
+    "sari_yengec": {
+      "name": "Akdeniz Sarı Taş Yengeci (Xantho poressa)",
+      "category": "PLASTIC",
+      "color_hex": "#ffdd33",
+      "idle": [
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Okyanus Kâşifleri'ni gördün mü? Fırtınada onlardan koptum."
+        },
+        {
+          "speaker": "Akdeniz Sarı Taş Yengeci (Xantho poressa)",
+          "text": "(İri kıskaçlarını öne uzatıp sertçe şakırdatır)\n\"Okyanus Kâşifleri mi? Umurumda bile değil! Bedavaya tek kelime etmem kaplumbağa. Bana plastik şişe getir. Boş gelirsen o yumuşak yüzgeçlerini kıskaçlarımla kıstırır, kabuğunu çatlatırım! Çekil önümden, laf değil plastik getir!\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Kıskaçlarını indir. Bulup geleceğim."
+        }
+      ],
+      "delivery": [
+        {
+          "speaker": "Akdeniz Sarı Taş Yengeci (Xantho poressa)",
+          "text": "(Kıskaçlarıyla pet şişeyi kapar, sert kıskacıyla vurup çatırdatır)\n\"Ver şunu! Hah... 500 yıl boyunca çürümeyen saf polimer. Bu kaynayan asitli suda kabuğuma zırh yapacağım, sonsuza kadar erimez.\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Anlaşma anlaşmaydı. Kâşifler nerede?"
+        },
+        {
+          "speaker": "Akdeniz Sarı Taş Yengeci (Xantho poressa)",
+          "text": "Batık binaların arasındaki karanlık kanyona kaçtılar. Arkalarına bile bakmıyorlardı; buradaki herkes gibi onlar da can derdindeydi. Alacağını aldın, şimdi kovuğumun önünden çekil!"
+        }
+      ],
+      "post_delivery": [
+        {
+          "speaker": "Akdeniz Sarı Taş Yengeci (Xantho poressa)",
+          "text": "(Kıskaçlarını tehditkâr biçimde kaldırır)\n\"Hâlâ ne dikiliyorsun tepemde? Batık kanyona kaçtılar dedim ya! Yüz git buradan, kovuğumu meşgul etme!\""
+        }
+      ]
+    },
+    "tas_kestanesi": {
+      "name": "Akdeniz Taş Kestanesi (Paracentrotus lividus)",
+      "category": "GLASS",
+      "color_hex": "#44cc55",
+      "idle": [
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Taş Kestanesi! Buralardan geçen Okyanus Kâşifleri'ni gördün mü?"
+        },
+        {
+          "speaker": "Akdeniz Taş Kestanesi (Paracentrotus lividus)",
+          "text": "(Dikenlerini savunmacı bir hırsla dikleştirip sallar)\n\"Ne kâşifi, ne insanı be kaplumbağa? Canım burnumda zaten! İnsanların asidi denizi sirkeye çevirdi; kireç kabuklarımız kâğıt gibi eriyor! Bana laf değil, deniz tabanından cam şişe getir. 4000 yıl çürümeyen, asidin eritemediği saf silis kumu lazım bana! Camı getirirsen kanyonu anlatırım, yoksa yıkıl karşımdan!\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Dikenlerini kollayacağım. Asitsiz zırhın için o cam şişeyi bulup geliyorum."
+        }
+      ],
+      "delivery": [
+        {
+          "speaker": "Akdeniz Taş Kestanesi (Paracentrotus lividus)",
+          "text": "(Cam şişeyi hırsla kapıp dikenlerinin arasına sertçe kilitler)\n\"Ver şunu! Hah... Saf silis! Deniz suyu isterse cehennem asidine dönsün, bu cam 4000 yıl boyunca tek bir çatlak bile vermez. Kabuğumu bununla zırhlayacağım!\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Anlaşmayı tamamladım. Kâşifler nereye gitti?"
+        },
+        {
+          "speaker": "Akdeniz Taş Kestanesi (Paracentrotus lividus)",
+          "text": "Batık gökdelenlerin arasındaki kanyonun en zifiri dibine indiler! İnsanlar kaçarken camlarının prizma ışığı kabuğuna vurdu; o karanlık geçitleri artık delip geçebilirsin. Alacağını aldın, şimdi çekil de kayama sımsıkı tutunayım!"
+        }
+      ],
+      "post_delivery": [
+        {
+          "speaker": "Akdeniz Taş Kestanesi (Paracentrotus lividus)",
+          "text": "(Sırtındaki cam prizma gibi parlarken dikenlerini oynatır)\n\"Hâlâ ne dikiliyorsun başımda? Kanyonun dibindeler dedim ya! Işığını da kaptın, yüz git buradan; koca kabuğunla suyumu bulandırıyorsun!\""
+        }
+      ],
+      "personality": "Asabi, kendi derdinde, Caretta’nın hikayesine prim vermeyen, okyanus asitlenmesine karşı 4000 yıllık saf silis zırhı isteyen sert kaya bekçisi (Anti-Pamuk Şeker).",
+      "biological_traits": "Kayalara sımsıkı tutunan, saatte birkaç santim kımıldayan, kalkerli iskeleti ve sivri dikenleriyle dış dünyaya tamamen kapalı yaşayan kadim Akdeniz derisidikenlisi (Paracentrotus lividus)."
+    },
+    "zirhli_istakoz": {
+      "name": "Akdeniz Zırhlı Böceği / Dikenli Istakoz (Palinurus elephas)",
+      "category": "METAL",
+      "color_hex": "#b0b8c0",
+      "idle": [
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Zırhlı Böcek! Kâşifler bu kanyon kapılarının ardına mı sığındı?"
+        },
+        {
+          "speaker": "Akdeniz Zırhlı Böceği (Palinurus elephas)",
+          "text": "(Dikenli antenlerini birbirine sürter: krrr-krrr! Yüksek bir akustik sürtünme sesi suda çınlar)\n\"Dur orada kaplumbağa! İki metrelik dikenli antenlerimin menzilindesin. Kâşiflerin peşine düşecek vaktim yok; batık arabaların aküleri kanyona zehir kusuyor, galvanik pas zırhımı çürütüyor! Bana korozyona dayanıklı alüminyum kutu getir. Zırhımı güçlendireyim, sana da o çelik kapıları devirecek koçbaşı kuyruk gücünü vereyim. Boş lafla o kapılar açılmaz!\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Antenlerini indir. Paslanmayan alüminyumu bulup getireceğim."
+        }
+      ],
+      "delivery": [
+        {
+          "speaker": "Akdeniz Zırhlı Böceği (Palinurus elephas)",
+          "text": "(Alüminyum kutuyu antenleriyle kavrayıp kitin zırhına sertçe kilitler)\n\"Hah! Saf alüminyum! Ağır metaller ve batık korozyonu artık bu karapaksa diş geçiremez. Zırh güçlendi! Al bakalım; kabuğuna koçbaşı kuyruk vuruşunu verdim. Çelik kanyon kapılarına dimdik çarp ve devir! Kâşifler o kapının ardındaki istasyona kapandı. Bas git oraya!\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Kapıyı devirip kâşiflere ulaşacağım!"
+        }
+      ],
+      "post_delivery": [
+        {
+          "speaker": "Akdeniz Zırhlı Böceği (Palinurus elephas)",
+          "text": "(Antenlerini gururla dikleştirir)\n\"Koçbaşı gücünü aldın asker! Hâlâ ne bekliyorsun? Git o çelik kapıları yerle bir et, kanyonu boşalt!\""
+        }
+      ],
+      "personality": "Askeri disiplinli, ödünsüz, batık korozyonundan kitin zırhını korumak için alüminyum isteyen sert deniz muhafızı (Anti-Pamuk Şeker).",
+      "biological_traits": "Kıskaçları yoktur (Homarus gibi değil); 2 metrelik kalın dikenli kırbaç antenleri, kitin karapaks zırhı, akustik stridülasyon organı (krrr-krrr sesi) ve karidoid kaçış kuyruğu vardır (Palinurus elephas)."
+    },
+    "deniz_tavsani": {
+      "name": "Akdeniz Boyalı Deniz Tavşanı (Felimare picta)",
+      "category": "ORGANIC",
+      "color_hex": "#3399ff",
+      "idle": [
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Boyalı Deniz Tavşanı... Kâşiflerin nereye gittiğini gördün mü? Suyun dibinde bir iz arıyorum."
+        },
+        {
+          "speaker": "Akdeniz Boyalı Deniz Tavşanı (Felimare picta)",
+          "text": "(Rinoferlerini uykulu uykulu esnetir, solungaç tacını ağır ağır dalgalandırır)\n\"...Hımm? Ne bu telaş kaplumbağa... Yüzgeçlerini öyle delice çırpma, suyumu bulandırıyorsun. Kimsenin beni avlayamayacağını bilirsin; derimdeki sünger zehirleri yüzünden koca balıklar bile yanımdan usulca geçer. Kâşifler batık kütüphaneden kaçarken ıslak kitaplar düşürdüler. O lifli kağıtların selülozu törpü dilime nefis bir tat veriyor. Git bana bir kitap getir, belki o zaman kâşifleri hatırlarım... Haaah...\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Törpü dilin için bir kitap bulup geleceğim. Sakın uykuya dalma."
+        }
+      ],
+      "delivery": [
+        {
+          "speaker": "Akdeniz Boyalı Deniz Tavşanı (Felimare picta)",
+          "text": "(Islak kitabın sayfalarını radulasıyla ağır ağır kazır)\n\"...Nefis. Saf ağaç lifi... İnsanların yüzlerce yıl önce bastığı o kağıtlar dipte çürürse kanyonun son oksijenini de bitirir. Törpü dilimle hepsini hücresel zırhıma katıyorum...\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Kitabını aldın. Şimdi söyle, kâşifler nereye kapandı?"
+        },
+        {
+          "speaker": "Akdeniz Boyalı Deniz Tavşanı (Felimare picta)",
+          "text": "(Ağır ağır solungaç çiçeğini dalgalandırır)\n\"Kâşifler o koca demir istasyonun hava kilidindeler... Kapıyı zorlarsan seni duyarlar. Ben biraz daha uyuyacağım... Zzz...\""
+        }
+      ],
+      "post_delivery": [
+        {
+          "speaker": "Akdeniz Boyalı Deniz Tavşanı (Felimare picta)",
+          "text": "Hâlâ burada mısın kaplumbağa?... Kâşifler istasyonun hava kilidinde dedim ya... Git o kapıyı zorla. Bırak da uyuyayım... Zzz..."
+        }
+      ]
+    },
+    "kadim_pina": {
+      "name": "Kadim Pina (Pinna nobilis)",
+      "color_hex": "#66d9ff",
+      "dialogue": [
+        {
+          "speaker": "Kadim Pina (Pinna nobilis)",
+          "text": "(Kabuğunu hafifçe aralar, derin ve kederli bir nefes alır)\n\"Hoş geldin küçük Caretta... Gözlerindeki telaşı görebiliyorum. Akdeniz artık bizim bildiğimiz Akdeniz değil...\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Sular gerçekten çok sıcak ve etraf plastiklerle dolu kadim dostum. Neden bu kadar acı çekiyorsun?"
+        },
+        {
+          "speaker": "Kadim Pina (Pinna nobilis)",
+          "text": "Deniz suyu sıcaklığı 30 dereceyi aştı. Aşırı sıcak dalgaları ve salgın hastalıklar Akdeniz'deki tüm türdaşlarımı, kardeşlerimi yok etti... Boyum bir metreyi aşsa da, ben kumlara kök salmış bir midyeyim; yüzüp kaçamam. Tek umudum, kâşiflerin ve senin Akdeniz'in derinliklerinde koruduğunuz o 'Son Resif'..."
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Dayan Kadim Pina! Okyanus Kâşifleri ekibimi bulup 'Son Resif'i kurtarmak için buradayım. Suların yeniden temizleneceğine ve resifin kurtulacağına and içiyorum!"
+        }
+      ]
+    },
+    "deri_sirtli_dev": {
+      "name": "Deri Sırtlı Bilge Dev (Dermochelys coriacea)",
+      "color_hex": "#59bfff",
+      "dialogue": [
+        {
+          "speaker": "Deri Sırtlı Bilge Dev (Dermochelys coriacea)",
+          "text": "(Ağır ve bilgece süzülür, derin ve yorgun bir ses tonuyla)\n\"Ah küçük kuzenim... Uzak okyanusları aşıp buraya kadar yüzdüm ama sular ne kadar da ılık... Bana biraz serinlik getirsen olmaz mı? Şöyle dondurucu, berrak bir parça buz...\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Buz mu? O da ne demek bilge dev? Plastik gibi bir şey mi? Yenebiliyor mu?"
+        },
+        {
+          "speaker": "Deri Sırtlı Bilge Dev (Dermochelys coriacea)",
+          "text": "(Hafifçe kıkırdar, ardından gözleri buğulanır)\n\"Aa, doğru ya... Unuttum! Artık buzlar yoktu değil mi? Yaşlandım artık, aklım hep o serin gençliğime, buzulların okyanusları kapladığı zamanlara gidiyor...\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Buzulları gerçekten gördün mü? Nasıldı oralar bilge dev?"
+        },
+        {
+          "speaker": "Deri Sırtlı Bilge Dev (Dermochelys coriacea)",
+          "text": "Ben dondurucu kutup denizlerine kadar yüzebilen tek deniz sürüngeniyim. Okyanusların ötesinde göğe uzanan masmavi devasa buz dağları vardı. Üzerlerinde bembeyaz dev kutup ayıları dolaşır, kıyılarda yüz binlerce penguen serin sulara dalardı... Şimdi ise her yer kaynıyor küçük kuzenim. Okyanus Kâşifleri dostlarını bul ve o Son Resif'i kurtar. Gelecek senin yüzgeçlerinde..."
+        }
+      ]
+    },
+    "okyanus_kasifleri_istasyon": {
+      "name": "Okyanus Kâşifleri & İstasyon",
+      "color_hex": "#ffd700",
+      "dialogue": [
+        {
+          "speaker": "📡 İstasyon Yapay Zekâsı (A.T.L.A.S.)",
+          "text": "(Bip-bip... [Akustik Sinyal ve Kilit Açılma Sesi])\n\"🚨 Sinyal Doğrulandı: Biyometrik eşleşme tamamlandı... 🐢 Caretta! Dış gövde hava kilidi ve iletişim hattı açılıyor!\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Sonunda buldum sizi! Koca fırtına beni sizden kopardığında çok korkmuştum... Ekip nerede? İyi misiniz?"
+        },
+        {
+          "speaker": "🧑‍🔬 Okyanus Kâşifleri Ekibi",
+          "text": "(Telsizden sevinç dolu sesler)\n\"Caretta! Geldin dostum! Fırtınada senden ayrı düştüğümüzde çok endişelendik. Sensörlerden kanyon boyunca atıkları temizleyip yerli canlılarla yol açarak bize ulaştığını izledik! Sayende istasyonun kapıları açıldı!\""
+        },
+        {
+          "speaker": "🐢 Caretta",
+          "text": "Artık yeniden bir aradayız! Peki ya Son Resif? Akdeniz'in geleceğini hala kurtarabilir miyiz?"
+        },
+        {
+          "speaker": "🧑‍🔬 Okyanus Kâşifleri Ekibi",
+          "text": "Evet! Laboratuvarda koruduğumuz dirençli mercan tohumları ve ÖÇK verileri güvende! Şimdi kanyonun ardındaki gizli 'Son Resif'e doğru BİRLİKTE yüzüyoruz. Akdeniz'in kalbini yeniden canlandıracağız! Sen gerçek bir İklim Elçisisin Caretta!"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/corals/coral_lace/scene.gltf" id="1_coral_lace_gltf"]
+
+[node name="CoralLace" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_coral_lace_gltf")]
+transform = Transform3D(12.0000, 0, 0, 0, 12.0000, 0, 0, 0, 12.0000, 0, 1.2948, 0)

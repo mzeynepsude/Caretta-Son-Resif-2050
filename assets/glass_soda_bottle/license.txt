@@ -1,0 +1,8 @@
+Model Information:
+* title:	Glass Soda Bottle
+* source:	https://sketchfab.com/3d-models/glass-soda-bottle-bbd62aca9b604860861a0f5f553b370f
+* author:	assetfactory (https://sketchfab.com/assetfactory)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

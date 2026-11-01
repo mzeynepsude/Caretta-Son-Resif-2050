@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Shader" path="res://shaders/underwater_building.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" uid="uid://d2177lk13s5mh" path="res://assets/building_facade_albedo.png" id="2_facade_albedo"]
+[ext_resource type="Texture2D" uid="uid://cioc6asy0k1qj" path="res://assets/building_facade_normal.png" id="3_facade_normal"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_monster_step"]
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/base_texture = ExtResource("2_facade_albedo")
+shader_parameter/normal_texture = ExtResource("3_facade_normal")
+shader_parameter/concrete_tint = Color(0.58, 0.62, 0.60, 1)
+shader_parameter/moss_deep_color = Color(0.04, 0.15, 0.08, 1)
+shader_parameter/moss_mid_color = Color(0.14, 0.38, 0.20, 1)
+shader_parameter/moss_light_color = Color(0.28, 0.55, 0.32, 1)
+shader_parameter/seabed_y = -7.5
+shader_parameter/building_height = 24.0
+shader_parameter/uv_scale = 0.20
+
+[sub_resource type="BoxMesh" id="BoxMesh_tier1"]
+material = SubResource("ShaderMaterial_monster_step")
+size = Vector3(26.0, 15.0, 14.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tier1"]
+size = Vector3(26.0, 15.0, 14.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tier2"]
+material = SubResource("ShaderMaterial_monster_step")
+size = Vector3(18.0, 20.0, 11.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tier2"]
+size = Vector3(18.0, 20.0, 11.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tier3"]
+material = SubResource("ShaderMaterial_monster_step")
+size = Vector3(10.0, 24.0, 8.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tier3"]
+size = Vector3(10.0, 24.0, 8.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_tank"]
+material = SubResource("ShaderMaterial_monster_step")
+size = Vector3(4.0, 3.0, 4.0)
+
+[node name="MonsterBuildingStepped" type="StaticBody3D"]
+
+[node name="Tier1Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
+mesh = SubResource("BoxMesh_tier1")
+
+[node name="Tier1Col" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0)
+shape = SubResource("BoxShape3D_tier1")
+
+[node name="Tier2Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10, -1)
+mesh = SubResource("BoxMesh_tier2")
+
+[node name="Tier2Col" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 10, -1)
+shape = SubResource("BoxShape3D_tier2")
+
+[node name="Tier3Mesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 12, -2)
+mesh = SubResource("BoxMesh_tier3")
+
+[node name="Tier3Col" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 12, -2)
+shape = SubResource("BoxShape3D_tier3")
+
+[node name="TankMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 25.5, -2)
+mesh = SubResource("BoxMesh_tank")

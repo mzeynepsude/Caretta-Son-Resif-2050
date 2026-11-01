@@ -1,0 +1,11 @@
+Model Information:
+* title:	Animated Sea Turtle - Rigged & Optimized
+* source:	https://sketchfab.com/3d-models/animated-sea-turtle-rigged-optimized-43034243d736417f9e7606e26ef0a23b
+* author:	GAMICO (https://sketchfab.com/gamico)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Animated Sea Turtle - Rigged & Optimized" (https://sketchfab.com/3d-models/animated-sea-turtle-rigged-optimized-43034243d736417f9e7606e26ef0a23b) by GAMICO (https://sketchfab.com/gamico) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

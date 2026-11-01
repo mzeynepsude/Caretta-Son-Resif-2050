@@ -1,0 +1,11 @@
+Model Information:
+* title:	Underwater_terrain_-_agisoftnaturechallenge
+* source:	https://sketchfab.com/3d-models/underwater-terrain---agisoftnaturechallenge-3dcb3f64c2fa4c798ac2bb16cf8c2d89
+* author:	teacherap123 (https://sketchfab.com/teacherap123)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Underwater_terrain_-_agisoftnaturechallenge" (https://sketchfab.com/3d-models/underwater-terrain---agisoftnaturechallenge-3dcb3f64c2fa4c798ac2bb16cf8c2d89) by teacherap123 (https://sketchfab.com/teacherap123) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

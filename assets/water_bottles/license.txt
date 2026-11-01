@@ -1,0 +1,8 @@
+Model Information:
+* title:	Water bottles
+* source:	https://sketchfab.com/3d-models/water-bottles-ea3ca404a98146c29a45ea9163ed270c
+* author:	Sousinho (https://sketchfab.com/sousinho)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

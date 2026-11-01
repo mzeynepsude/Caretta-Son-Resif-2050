@@ -1,0 +1,8 @@
+Model Information:
+* title:	Lowpoly coral
+* source:	https://sketchfab.com/3d-models/lowpoly-coral-1953b37b758d4b658020e9f0de4f780b
+* author:	assetfactory (https://sketchfab.com/assetfactory)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

@@ -1,0 +1,46 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://clwiq1qcqx3vy" path="res://scripts/school_fish.gd" id="1_school_fish_script"]
+[ext_resource type="PackedScene" uid="uid://dbod2b6qa0l3w" path="res://assets/fish/perch_mediterranean/scene.gltf" id="2_perch_scene"]
+[ext_resource type="PackedScene" uid="uid://byvfx3ubbejbm" path="res://assets/fish/wrasse_thalassoma/scene.gltf" id="3_thalassoma_scene"]
+[ext_resource type="PackedScene" uid="uid://3j1whir7onb5" path="res://assets/fish/wrasse_symphodus/scene.gltf" id="4_symphodus_scene"]
+[ext_resource type="PackedScene" uid="uid://chu1qlbvir2bp" path="res://assets/fish/sargos_striped/scene.gltf" id="5_sargos_scene"]
+
+[node name="SchoolFish" type="Node3D"]
+script = ExtResource("1_school_fish_script")
+
+[node name="FishLead_Levrek" parent="." instance=ExtResource("2_perch_scene")]
+transform = Transform3D(0.005, 0, 0, 0, 0.005, 0, 0, 0, 0.005, 0, 0, 0.7)
+
+[node name="FishFollow_Levrek" parent="." instance=ExtResource("2_perch_scene")]
+transform = Transform3D(0.004, 0, 0, 0, 0.004, 0, 0, 0, 0.004, -0.6, 0.2, -0.4)
+
+[node name="Fish_Thalassoma" type="Node3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0.65, -0.1, 0.2)
+
+[node name="Model" parent="Fish_Thalassoma" instance=ExtResource("3_thalassoma_scene")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0, 0, 0)
+
+[node name="Fish_Thalassoma2" type="Node3D" parent="."]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, 0.85, 0.15, -0.2)
+
+[node name="Model" parent="Fish_Thalassoma2" instance=ExtResource("3_thalassoma_scene")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0, 0, 0)
+
+[node name="Fish_Symphodus" type="Node3D" parent="."]
+transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, -0.5, -0.2, 0.5)
+
+[node name="Model" parent="Fish_Symphodus" instance=ExtResource("4_symphodus_scene")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, 0, 0, 0)
+
+[node name="Fish_Sargos" type="Node3D" parent="."]
+transform = Transform3D(0.16, 0, 0, 0, 0.16, 0, 0, 0, 0.16, 0.35, 0.25, -0.6)
+
+[node name="Model" parent="Fish_Sargos" instance=ExtResource("5_sargos_scene")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="Fish_Sargos2" type="Node3D" parent="."]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, -0.3, -0.1, -0.7)
+
+[node name="Model" parent="Fish_Sargos2" instance=ExtResource("5_sargos_scene")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)

@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/corals/coral_single/scene.gltf" id="1_coral_single_gltf"]
+
+[node name="CoralSingle" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_coral_single_gltf")]
+transform = Transform3D(0.3500, 0, 0, 0, 0.3500, 0, 0, 0, 0.3500, 0, 0.0409, 0)

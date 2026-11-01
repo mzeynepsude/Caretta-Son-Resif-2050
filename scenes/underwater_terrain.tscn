@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/terrain/underwater_terrain_agisoft/scene.gltf" id="1_terrain_gltf"]
+
+[node name="UnderwaterTerrain" type="Node3D"]
+
+[node name="TerrainMesh" parent="." instance=ExtResource("1_terrain_gltf")]
+

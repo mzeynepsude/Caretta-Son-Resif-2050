@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dmydie01kadim"]
+
+[ext_resource type="Script" uid="uid://dxrcclx7nqhmr" path="res://scripts/npc_midye.gd" id="1_midye_script"]
+[ext_resource type="ArrayMesh" uid="uid://yymqdw1a5n5g" path="res://assets/midye_bottom.obj" id="2_midye_bottom"]
+[ext_resource type="ArrayMesh" uid="uid://bwrm1fpnn78nx" path="res://assets/midye_top.obj" id="3_midye_top"]
+[ext_resource type="Shader" path="res://shaders/kadim_midye_outer.gdshader" id="4_outer_shader"]
+[ext_resource type="Shader" path="res://shaders/kadim_midye_inner.gdshader" id="5_inner_shader"]
+[ext_resource type="Shader" path="res://shaders/kadim_pearl.gdshader" id="6_pearl_shader"]
+[ext_resource type="PackedScene" path="res://scenes/underwater_plant.tscn" id="7_plant_grass"]
+[ext_resource type="PackedScene" path="res://scenes/coral_brain.tscn" id="8_coral_brain"]
+[ext_resource type="PackedScene" path="res://scenes/coral_plate.tscn" id="9_coral_plate"]
+[ext_resource type="PackedScene" path="res://scenes/coral_gold.tscn" id="10_coral_gold"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_midye"]
+radius = 3.5
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_outer"]
+render_priority = 0
+shader = ExtResource("4_outer_shader")
+shader_parameter/shell_base_color = Color(0.2, 0.22, 0.19, 1)
+shader_parameter/moss_deep_color = Color(0.08, 0.28, 0.1, 1)
+shader_parameter/moss_vibrant_color = Color(0.18, 0.46, 0.15, 1)
+shader_parameter/barnacle_color = Color(0.68, 0.65, 0.58, 1)
+shader_parameter/moss_coverage = 0.58
+shader_parameter/barnacle_intensity = 0.35
+shader_parameter/roughness_val = 0.9
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_inner"]
+render_priority = 0
+shader = ExtResource("5_inner_shader")
+shader_parameter/nacre_base_color = Color(0.88, 0.93, 0.96, 1)
+shader_parameter/iridescence_cyan = Color(0.45, 0.88, 0.95, 1)
+shader_parameter/iridescence_pink = Color(0.82, 0.7, 0.9, 1)
+shader_parameter/pearl_glow_reflection = Color(0.2, 0.65, 0.85, 1)
+shader_parameter/iridescence_strength = 0.9
+shader_parameter/metallic_val = 0.35
+shader_parameter/roughness_val = 0.16
+shader_parameter/inner_glow_intensity = 0.3375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pearl"]
+render_priority = 0
+shader = ExtResource("6_pearl_shader")
+shader_parameter/pearl_albedo = Color(0.96, 0.98, 1, 1)
+shader_parameter/pearl_emission_color = Color(0.65, 0.92, 1, 1)
+shader_parameter/iridescence_tint = Color(0.85, 0.75, 0.95, 1)
+shader_parameter/emission_energy = 2.7
+shader_parameter/fresnel_sheen = 0.975
+shader_parameter/roughness_val = 0.05
+shader_parameter/metallic_val = 0.28
+
+[sub_resource type="SphereMesh" id="SphereMesh_pearl"]
+material = SubResource("ShaderMaterial_pearl")
+radius = 0.72
+height = 1.44
+radial_segments = 48
+rings = 24
+
+[node name="KadimMidyeNPC" type="Area3D"]
+script = ExtResource("1_midye_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, -1.8)
+shape = SubResource("SphereShape3D_midye")
+
+[node name="ShellBottom" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.45, 0, 0, 0, 1, 0, 0, 0, 1.05, 0, 0, 0)
+mesh = ExtResource("2_midye_bottom")
+surface_material_override/0 = SubResource("ShaderMaterial_outer")
+surface_material_override/1 = SubResource("ShaderMaterial_inner")
+
+[node name="ShellTop" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.45, 0, 0, 0, 1, 0, 0, 0, 1.05, 0, 0, 0)
+mesh = ExtResource("3_midye_top")
+surface_material_override/0 = SubResource("ShaderMaterial_outer")
+surface_material_override/1 = SubResource("ShaderMaterial_inner")
+
+[node name="PearlCore" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, -1.4)
+mesh = SubResource("SphereMesh_pearl")
+
+[node name="MidyeGlow" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.85, -1.4)
+light_color = Color(0.7, 0.95, 1, 1)
+light_energy = 3.9
+omni_range = 10.5
+
+[node name="BaseGrass1" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, -2.1, 0.05, -0.6)
+
+[node name="BaseGrass2" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(0.9, 0, 0.4, 0, 1, 0, -0.4, 0, 0.9, 2.1, 0.05, -0.6)
+
+[node name="BaseGrass3" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(0.8, 0, -0.3, 0, 0.9, 0, 0.3, 0, 0.8, -2.5, 0.05, -1.8)
+
+[node name="BaseGrass4" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(1, 0, -0.2, 0, 1, 0, 0.2, 0, 1, 2.5, 0.05, -1.8)
+
+[node name="BaseGrass5" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(0.95, 0, 0.3, 0, 0.95, 0, -0.3, 0, 0.95, -2.2, 0.05, -3.2)
+
+[node name="BaseGrass6" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(1, 0, -0.1, 0, 1, 0, 0.1, 0, 1, 2.2, 0.05, -3.2)
+
+[node name="BaseGrass7" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(0.9, 0, 0.5, 0, 0.9, 0, -0.5, 0, 0.9, 0, 0.05, -5.0)
+
+[node name="BaseGrass8" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(1.1, 0, -0.4, 0, 1.1, 0, 0.4, 0, 1.1, -1.2, 0.05, 0.6)
+
+[node name="BaseGrass9" parent="." instance=ExtResource("7_plant_grass")]
+transform = Transform3D(1.1, 0, 0.2, 0, 1.1, 0, -0.2, 0, 1.1, 1.2, 0.05, 0.6)
+
+[node name="BaseCoralBrain" parent="." instance=ExtResource("8_coral_brain")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -2.7, 0.05, -1.2)
+
+[node name="BaseCoralPlate" parent="." instance=ExtResource("9_coral_plate")]
+transform = Transform3D(0.6, 0, 0.2, 0, 0.6, 0, -0.2, 0, 0.6, 2.8, 0.05, -1.5)
+
+[node name="BaseCoralGold" parent="." instance=ExtResource("10_coral_gold")]
+transform = Transform3D(0.55, 0, -0.15, 0, 0.55, 0, 0.15, 0, 0.55, 2.4, 0.05, -3.4)

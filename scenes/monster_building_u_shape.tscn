@@ -1,0 +1,73 @@
+[gd_scene load_steps=10 format=3]
+
+[ext_resource type="Shader" path="res://shaders/underwater_building.gdshader" id="1_shader"]
+[ext_resource type="Texture2D" uid="uid://d2177lk13s5mh" path="res://assets/building_facade_albedo.png" id="2_facade_albedo"]
+[ext_resource type="Texture2D" uid="uid://cioc6asy0k1qj" path="res://assets/building_facade_normal.png" id="3_facade_normal"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_monster"]
+render_priority = 0
+shader = ExtResource("1_shader")
+shader_parameter/base_texture = ExtResource("2_facade_albedo")
+shader_parameter/normal_texture = ExtResource("3_facade_normal")
+shader_parameter/concrete_tint = Color(0.60, 0.64, 0.62, 1)
+shader_parameter/moss_deep_color = Color(0.04, 0.15, 0.08, 1)
+shader_parameter/moss_mid_color = Color(0.14, 0.38, 0.20, 1)
+shader_parameter/moss_light_color = Color(0.28, 0.55, 0.32, 1)
+shader_parameter/seabed_y = -7.5
+shader_parameter/building_height = 22.0
+shader_parameter/uv_scale = 0.22
+
+[sub_resource type="BoxMesh" id="BoxMesh_center"]
+material = SubResource("ShaderMaterial_monster")
+size = Vector3(22.0, 20.0, 10.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_center"]
+size = Vector3(22.0, 20.0, 10.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wing_left"]
+material = SubResource("ShaderMaterial_monster")
+size = Vector3(8.0, 18.0, 14.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wing_left"]
+size = Vector3(8.0, 18.0, 14.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_wing_right"]
+material = SubResource("ShaderMaterial_monster")
+size = Vector3(8.0, 22.0, 14.0)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wing_right"]
+size = Vector3(8.0, 22.0, 14.0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_roof"]
+material = SubResource("ShaderMaterial_monster")
+size = Vector3(6.0, 3.0, 5.0)
+
+[node name="MonsterBuildingUShape" type="StaticBody3D"]
+
+[node name="CentralBlockMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+mesh = SubResource("BoxMesh_center")
+
+[node name="CentralBlockCol" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+shape = SubResource("BoxShape3D_center")
+
+[node name="LeftWingMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 9, 8)
+mesh = SubResource("BoxMesh_wing_left")
+
+[node name="LeftWingCol" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 9, 8)
+shape = SubResource("BoxShape3D_wing_left")
+
+[node name="RightWingMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 11, 8)
+mesh = SubResource("BoxMesh_wing_right")
+
+[node name="RightWingCol" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 11, 8)
+shape = SubResource("BoxShape3D_wing_right")
+
+[node name="RoofBlockMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.5, 0)
+mesh = SubResource("BoxMesh_roof")

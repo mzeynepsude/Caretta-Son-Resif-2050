@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://ci1ntrocutsc3n3"]
+
+[ext_resource type="Script" path="res://scripts/intro_cutscene.gd" id="1_intro_script"]
+[ext_resource type="VideoStream" path="res://assets/video/intro_cinematic.ogv" id="2_cinematic_video"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_subtitle_panel"]
+content_margin_left = 30.0
+content_margin_top = 14.0
+content_margin_right = 30.0
+content_margin_bottom = 14.0
+bg_color = Color(0.05, 0.07, 0.11, 0.88)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.86, 0.74, 0.48, 0.85)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+shadow_color = Color(0, 0, 0, 0.7)
+shadow_size = 18
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cutscene_nameplate"]
+content_margin_left = 16.0
+content_margin_top = 4.0
+content_margin_right = 16.0
+content_margin_bottom = 4.0
+bg_color = Color(0.04, 0.06, 0.09, 0.96)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.88, 0.76, 0.5, 0.92)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+shadow_color = Color(0.88, 0.76, 0.5, 0.25)
+shadow_size = 4
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_genshin_sep"]
+color = Color(0.86, 0.74, 0.48, 0.35)
+thickness = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_skip_pill"]
+content_margin_left = 14.0
+content_margin_top = 6.0
+content_margin_right = 14.0
+content_margin_bottom = 6.0
+bg_color = Color(0.05, 0.07, 0.1, 0.8)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.86, 0.74, 0.48, 0.75)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="IntroCutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_intro_script")
+
+[node name="ColorRectBackground" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.05, 0.08, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("2_cinematic_video")
+autoplay = true
+expand = true
+
+[node name="LetterboxTop" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 48.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)
+
+[node name="LetterboxBottom" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="SkipLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -190.0
+offset_top = 58.0
+offset_right = -30.0
+offset_bottom = 93.0
+grow_horizontal = 0
+theme_override_styles/normal = SubResource("StyleBoxFlat_skip_pill")
+theme_override_colors/font_color = Color(0.95, 0.88, 0.7, 0.95)
+theme_override_font_sizes/font_size = 13
+text = "✦ [ ESC ] ile Atla ✦"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubtitlePanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -460.0
+offset_top = -210.0
+offset_right = 460.0
+offset_bottom = -58.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_subtitle_panel")
+
+[node name="Margin" type="MarginContainer" parent="SubtitlePanel"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="SubtitlePanel/Margin"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="HeaderHBox" type="HBoxContainer" parent="SubtitlePanel/Margin/VBox"]
+layout_mode = 2
+
+[node name="Nameplate" type="PanelContainer" parent="SubtitlePanel/Margin/VBox/HeaderHBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_cutscene_nameplate")
+
+[node name="SpeakerLabel" type="Label" parent="SubtitlePanel/Margin/VBox/HeaderHBox/Nameplate"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.91, 0.68, 1)
+theme_override_font_sizes/font_size = 15
+text = "◆ Caretta (1. Sahne: Hortum & Kopuş) ◆"
+
+[node name="HSeparator" type="HSeparator" parent="SubtitlePanel/Margin/VBox"]
+layout_mode = 2
+theme_override_styles/separator = SubResource("StyleBoxLine_genshin_sep")
+
+[node name="TextLabel" type="Label" parent="SubtitlePanel/Margin/VBox"]
+custom_minimum_size = Vector2(860, 54)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.95, 0.98, 1)
+theme_override_constants/line_spacing = 5
+theme_override_font_sizes/font_size = 15
+text = "\"Okyanus Kâşifleri ekibimle Akdeniz'i korumaya ant içmiştik... Ama dev sualtı hortumu ve sıcak akıntı beni ekibimden kopardı!\""
+autowrap_mode = 2
+visible_characters_behavior = 1
+
+[node name="PromptLabel" type="Label" parent="SubtitlePanel/Margin/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.88, 0.52, 1)
+theme_override_font_sizes/font_size = 12
+text = "✦ Sahne 1 / 4 ✦"
+horizontal_alignment = 2
+
+[node name="FadeOverlay" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

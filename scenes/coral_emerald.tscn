@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/corals/coral_brain/scene.gltf" id="1_coral_brain_gltf"]
+
+[sub_resource type="StandardMaterial3D" id="Material_emerald_brain"]
+albedo_color = Color(0.18, 0.78, 0.45, 1)
+roughness = 0.55
+emission_enabled = true
+emission = Color(0.08, 0.45, 0.25, 1)
+emission_energy_multiplier = 0.7
+
+[node name="CoralEmerald" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_coral_brain_gltf")]
+transform = Transform3D(22.0000, 0, 0, 0, 22.0000, 0, 0, 0, 22.0000, 0, 1.1044, 0)
+
+

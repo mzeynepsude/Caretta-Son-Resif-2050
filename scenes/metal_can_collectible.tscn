@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://metal_can_item"]
+
+[ext_resource type="Script" path="res://scripts/collectible.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/aluminium_can/scene.gltf" id="2_model"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hitbox"]
+radius = 1.2
+
+[node name="MetalCan" type="Area3D"]
+script = ExtResource("1_script")
+item_name = "Geri Dönüştürülebilir Alüminyum Kutu"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_hitbox")
+
+[node name="CanModel" parent="." instance=ExtResource("2_model")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, -0.4, 0)
+
+[node name="GlowLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+light_color = Color(0.85, 0.92, 1, 1)
+light_energy = 1.3
+omni_range = 4.0
+

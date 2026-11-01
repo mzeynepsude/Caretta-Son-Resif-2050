@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ckqtxcg4ibr61"]
+
+[ext_resource type="Script" path="res://scripts/okyanus_kasifi_turtle.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://assets/sea_turtle/scene.gltf" id="2_turtle_model"]
+
+[node name="OkyanusKasifiTurtle" type="Node3D"]
+script = ExtResource("1_script")
+
+[node name="TurtleModel" parent="." instance=ExtResource("2_turtle_model")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, 0, 0, 0)
+
+[node name="GreetingLabel" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3, 0)
+pixel_size = 0.007
+billboard = 1
+double_sided = false
+modulate = Color(0.4, 0.95, 1, 1)
+outline_modulate = Color(0.02, 0.12, 0.22, 1)
+text = "🐢 Okyanus Kâşifi"
+font_size = 20
+outline_size = 6
+

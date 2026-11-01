@@ -1,0 +1,210 @@
+[gd_scene load_steps=17 format=3 uid="uid://npc_sari_yengec_scene_01"]
+
+[ext_resource type="Script" path="res://scripts/recycling_npc.gd" id="1_script"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_detect"]
+radius = 3.2
+
+[sub_resource type="StandardMaterial3D" id="Material_rock"]
+albedo_color = Color(0.24, 0.28, 0.25, 1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rock"]
+material = SubResource("Material_rock")
+top_radius = 0.55
+bottom_radius = 0.75
+height = 0.35
+
+[sub_resource type="StandardMaterial3D" id="Material_crab_shell_yellow"]
+albedo_color = Color(0.96, 0.80, 0.15, 1)
+metallic = 0.25
+roughness = 0.32
+emission_enabled = true
+emission = Color(0.90, 0.70, 0.10, 1)
+emission_energy_multiplier = 0.45
+rim_enabled = true
+rim = 0.75
+rim_tint = 0.5
+clearcoat_enabled = true
+clearcoat = 0.85
+clearcoat_roughness = 0.2
+
+[sub_resource type="SphereMesh" id="SphereMesh_carapace"]
+material = SubResource("Material_crab_shell_yellow")
+radius = 1.0
+height = 0.6
+
+[sub_resource type="StandardMaterial3D" id="Material_crab_cuticle_translucent"]
+transparency = 1
+blend_mode = 0
+albedo_color = Color(1.0, 0.92, 0.45, 0.28)
+metallic = 0.2
+roughness = 0.15
+rim_enabled = true
+rim = 0.9
+rim_tint = 0.6
+clearcoat_enabled = true
+clearcoat = 1.0
+clearcoat_roughness = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_carapace_overlay"]
+material = SubResource("Material_crab_cuticle_translucent")
+radius = 1.018
+height = 0.612
+
+[sub_resource type="StandardMaterial3D" id="Material_marginal_spine"]
+albedo_color = Color(0.96, 0.76, 0.14, 1)
+metallic = 0.2
+roughness = 0.3
+emission_enabled = true
+emission = Color(0.85, 0.62, 0.08, 1)
+emission_energy_multiplier = 0.45
+
+[sub_resource type="SphereMesh" id="SphereMesh_marginal_spine_mid"]
+material = SubResource("Material_marginal_spine")
+radius = 0.16
+height = 0.14
+
+[sub_resource type="SphereMesh" id="SphereMesh_marginal_spine_side"]
+material = SubResource("Material_marginal_spine")
+radius = 0.14
+height = 0.12
+
+[sub_resource type="SphereMesh" id="SphereMesh_marginal_spine_edge"]
+material = SubResource("Material_marginal_spine")
+radius = 0.12
+height = 0.1
+
+[sub_resource type="StandardMaterial3D" id="Material_claw_yellow"]
+albedo_color = Color(0.98, 0.82, 0.22, 1)
+metallic = 0.35
+roughness = 0.3
+emission_enabled = true
+emission = Color(0.9, 0.7, 0.1, 1)
+emission_energy_multiplier = 0.45
+
+[sub_resource type="BoxMesh" id="BoxMesh_claw"]
+material = SubResource("Material_claw_yellow")
+size = Vector3(0.42, 0.3, 0.95)
+
+[sub_resource type="StandardMaterial3D" id="Material_eye"]
+albedo_color = Color(0.08, 0.08, 0.08, 1)
+metallic = 0.8
+roughness = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_eye"]
+material = SubResource("Material_eye")
+radius = 0.1
+height = 0.2
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_leg"]
+material = SubResource("Material_marginal_spine")
+top_radius = 0.07
+bottom_radius = 0.04
+height = 0.95
+
+[node name="NpcYengec" type="Area3D"]
+script = ExtResource("1_script")
+category = 0
+npc_name = "Akdeniz Sarı Taş Yengeci (Xantho poressa)"
+short_name = "Sarı Yengeç"
+required_keyword = "Plastik"
+npc_theme_color = Color(1, 0.85, 0.2, 1)
+badge_title = "Kâşif Bilgisi: Batık Kanyon"
+badge_desc = "Kanyon rotası netleşti: Yüzme hızı 1.25x arttı."
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_detect")
+
+[node name="VisualRoot" type="Node3D" parent="."]
+transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 0, 0.16, 0)
+
+[node name="Carapace" type="MeshInstance3D" parent="VisualRoot"]
+mesh = SubResource("SphereMesh_carapace")
+
+[node name="CarapaceCuticleOverlay" type="MeshInstance3D" parent="VisualRoot"]
+mesh = SubResource("SphereMesh_carapace_overlay")
+
+[node name="MarginalSpines" type="Node3D" parent="VisualRoot"]
+
+[node name="Spine_L1" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76, 0.05, -0.64)
+mesh = SubResource("SphereMesh_marginal_spine_edge")
+
+[node name="Spine_L2" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.92, 0.04, -0.36)
+mesh = SubResource("SphereMesh_marginal_spine_side")
+
+[node name="Spine_L3" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.02, 0.02, -0.04)
+mesh = SubResource("SphereMesh_marginal_spine_mid")
+
+[node name="Spine_L4" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.95, 0, 0.28)
+mesh = SubResource("SphereMesh_marginal_spine_side")
+
+[node name="Spine_L5" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.78, -0.02, 0.58)
+mesh = SubResource("SphereMesh_marginal_spine_edge")
+
+[node name="Spine_R1" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76, 0.05, -0.64)
+mesh = SubResource("SphereMesh_marginal_spine_edge")
+
+[node name="Spine_R2" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.92, 0.04, -0.36)
+mesh = SubResource("SphereMesh_marginal_spine_side")
+
+[node name="Spine_R3" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02, 0.02, -0.04)
+mesh = SubResource("SphereMesh_marginal_spine_mid")
+
+[node name="Spine_R4" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.95, 0, 0.28)
+mesh = SubResource("SphereMesh_marginal_spine_side")
+
+[node name="Spine_R5" type="MeshInstance3D" parent="VisualRoot/MarginalSpines"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.78, -0.02, 0.58)
+mesh = SubResource("SphereMesh_marginal_spine_edge")
+
+[node name="ClawLeft" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.866025, 0, -0.5, 0, 1, 0, 0.5, 0, 0.866025, -0.95, 0.1, -0.5)
+mesh = SubResource("BoxMesh_claw")
+
+[node name="ClawRight" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0.95, 0.1, -0.5)
+mesh = SubResource("BoxMesh_claw")
+
+[node name="EyeLeft" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.3, 0.35, -0.7)
+mesh = SubResource("SphereMesh_eye")
+
+[node name="EyeRight" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.35, -0.7)
+mesh = SubResource("SphereMesh_eye")
+
+[node name="Leg1" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -1.15, -0.1, -0.2)
+mesh = SubResource("CylinderMesh_leg")
+
+[node name="Leg2" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -1.15, -0.1, 0.2)
+mesh = SubResource("CylinderMesh_leg")
+
+[node name="Leg3" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 1.15, -0.1, -0.2)
+mesh = SubResource("CylinderMesh_leg")
+
+[node name="Leg4" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.707107, -0.707107, 0, 0.707107, 0.707107, 0, 0, 0, 1, 1.15, -0.1, 0.2)
+mesh = SubResource("CylinderMesh_leg")
+
+[node name="AuraLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+light_color = Color(1, 0.85, 0.2, 1)
+light_energy = 2.0
+omni_range = 7.0
+
+[node name="RockPedestal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18, 0)
+mesh = SubResource("CylinderMesh_rock")

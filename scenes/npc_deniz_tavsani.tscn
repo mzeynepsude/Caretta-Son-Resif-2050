@@ -1,0 +1,141 @@
+[gd_scene load_steps=16 format=3 uid="uid://npc_deniz_tavsani_scene_01"]
+
+[ext_resource type="Script" path="res://scripts/recycling_npc.gd" id="1_script"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_detect"]
+radius = 3.2
+
+[sub_resource type="StandardMaterial3D" id="Material_rock"]
+albedo_color = Color(0.24, 0.28, 0.25, 1)
+roughness = 0.95
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rock"]
+material = SubResource("Material_rock")
+top_radius = 0.55
+bottom_radius = 0.75
+height = 0.35
+
+[sub_resource type="StandardMaterial3D" id="Material_slug_body"]
+albedo_color = Color(0.08, 0.32, 0.82, 1)
+metallic = 0.15
+roughness = 0.25
+emission_enabled = true
+emission = Color(0.05, 0.22, 0.65, 1)
+emission_energy_multiplier = 0.45
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_slug_body"]
+material = SubResource("Material_slug_body")
+radius = 0.45
+height = 2.4
+
+[sub_resource type="StandardMaterial3D" id="Material_yellow_stripe"]
+albedo_color = Color(0.98, 0.82, 0.15, 1)
+metallic = 0.2
+roughness = 0.3
+emission_enabled = true
+emission = Color(0.9, 0.72, 0.1, 1)
+emission_energy_multiplier = 0.6
+
+[sub_resource type="BoxMesh" id="BoxMesh_mantle_trim"]
+material = SubResource("Material_yellow_stripe")
+size = Vector3(0.95, 0.08, 2.2)
+
+[sub_resource type="StandardMaterial3D" id="Material_rhinophore"]
+albedo_color = Color(0.12, 0.45, 0.95, 1)
+metallic = 0.2
+roughness = 0.2
+emission_enabled = true
+emission = Color(0.2, 0.6, 1.0, 1)
+emission_energy_multiplier = 0.7
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_horn"]
+material = SubResource("Material_rhinophore")
+top_radius = 0.03
+bottom_radius = 0.08
+height = 0.65
+
+[sub_resource type="SphereMesh" id="SphereMesh_horn_tip"]
+material = SubResource("Material_yellow_stripe")
+radius = 0.06
+height = 0.12
+
+[sub_resource type="StandardMaterial3D" id="Material_gill_flower"]
+transparency = 1
+albedo_color = Color(0.25, 0.75, 1.0, 0.85)
+metallic = 0.1
+roughness = 0.2
+emission_enabled = true
+emission = Color(0.3, 0.8, 1.0, 1)
+emission_energy_multiplier = 0.9
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_gill"]
+material = SubResource("Material_gill_flower")
+top_radius = 0.01
+bottom_radius = 0.05
+height = 0.55
+
+[node name="NpcDenizTavsani" type="Area3D"]
+script = ExtResource("1_script")
+category = 3
+npc_name = "Akdeniz Boyalı Deniz Tavşanı (Felimare picta)"
+short_name = "Deniz Tavşanı"
+required_keyword = "Kağıt"
+npc_theme_color = Color(0.25, 0.75, 1, 1)
+badge_title = "Kâşif Bilgisi: ÖÇK İstasyonu"
+badge_desc = "ÖÇK Gözlem İstasyonu'nun hava kilidi protokolü öğrenildi: Can ve dayanıklılık barı yenilendi!"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_detect")
+
+[node name="VisualRoot" type="Node3D" parent="."]
+transform = Transform3D(0.32, 0, 0, 0, 0.32, 0, 0, 0, 0.32, 0, 0.16, 0)
+
+[node name="Body" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.35, 0)
+mesh = SubResource("CapsuleMesh_slug_body")
+
+[node name="MantleTrim" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+mesh = SubResource("BoxMesh_mantle_trim")
+
+[node name="HornLeft" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.965926, 0.183013, -0.183013, 0, 0.707107, 0.707107, 0.258819, -0.683013, 0.683013, -0.22, 0.8, -0.7)
+mesh = SubResource("CylinderMesh_horn")
+
+[node name="TipLeft" type="MeshInstance3D" parent="VisualRoot/HornLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+mesh = SubResource("SphereMesh_horn_tip")
+
+[node name="HornRight" type="MeshInstance3D" parent="VisualRoot"]
+transform = Transform3D(0.965926, -0.183013, 0.183013, 0, 0.707107, 0.707107, -0.258819, -0.683013, 0.683013, 0.22, 0.8, -0.7)
+mesh = SubResource("CylinderMesh_horn")
+
+[node name="TipRight" type="MeshInstance3D" parent="VisualRoot/HornRight"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+mesh = SubResource("SphereMesh_horn_tip")
+
+[node name="GillFlower" type="Node3D" parent="VisualRoot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.65)
+
+[node name="Gill1" type="MeshInstance3D" parent="VisualRoot/GillFlower"]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0, 0.15)
+mesh = SubResource("CylinderMesh_gill")
+
+[node name="Gill2" type="MeshInstance3D" parent="VisualRoot/GillFlower"]
+transform = Transform3D(0.707107, 0.612372, -0.353553, 0, 0.5, 0.866025, 0.707107, -0.612372, 0.353553, 0.15, 0, -0.08)
+mesh = SubResource("CylinderMesh_gill")
+
+[node name="Gill3" type="MeshInstance3D" parent="VisualRoot/GillFlower"]
+transform = Transform3D(0.707107, -0.612372, 0.353553, 0, 0.5, 0.866025, -0.707107, -0.612372, 0.353553, -0.15, 0, -0.08)
+mesh = SubResource("CylinderMesh_gill")
+
+[node name="AuraLight" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+light_color = Color(0.2, 0.7, 1, 1)
+light_energy = 2.2
+omni_range = 7.5
+
+[node name="RockPedestal" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18, 0)
+mesh = SubResource("CylinderMesh_rock")
+

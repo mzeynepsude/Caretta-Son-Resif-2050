@@ -1,0 +1,17 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://assets/corals/coral_lace/scene.gltf" id="1_coral_lace_gltf"]
+
+[sub_resource type="StandardMaterial3D" id="Material_purple_lace"]
+albedo_color = Color(0.65, 0.22, 0.75, 1)
+roughness = 0.6
+emission_enabled = true
+emission = Color(0.38, 0.08, 0.48, 1)
+emission_energy_multiplier = 0.65
+
+[node name="CoralPurple" type="Node3D"]
+
+[node name="Model" parent="." instance=ExtResource("1_coral_lace_gltf")]
+transform = Transform3D(12.0000, 0, 0, 0, 12.0000, 0, 0, 0, 12.0000, 0, 1.2948, 0)
+
+
